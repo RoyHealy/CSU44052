@@ -1,110 +1,122 @@
 [
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp",
   "output": "CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
   "output": "CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_character.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_character.cpp",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_character.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_character.cpp",
   "output": "CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
   "output": "CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3",
-  "command": "/usr/bin/gcc -Dglad_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -g -fPIC -o CMakeFiles/glad.dir/src/gl.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.cpp",
+  "output": "CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o"
+},
+{
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/render/shader.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/render/shader.cpp",
+  "output": "CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o"
+},
+{
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3",
+  "command": "/usr/bin/gcc -Dglad_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -fPIC -o CMakeFiles/glad.dir/src/gl.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c",
   "output": "external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/context.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/context.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/context.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/context.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/context.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/context.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/context.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/init.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/init.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/init.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/init.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/init.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/init.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/init.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/input.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/input.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/input.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/input.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/input.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/input.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/input.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/monitor.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/monitor.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/monitor.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/monitor.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/monitor.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/monitor.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/monitor.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/window.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/window.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/window.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/window.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/window.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/window.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/window.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_init.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_init.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_init.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_init.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/x11_init.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_monitor.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_monitor.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_monitor.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_monitor.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_window.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/x11_window.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_window.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/x11_window.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/x11_window.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/xkb_unicode.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/xkb_unicode.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/xkb_unicode.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/xkb_unicode.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/linux_joystick.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/linux_joystick.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/linux_joystick.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/linux_joystick.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/posix_time.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/posix_time.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/posix_time.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/posix_time.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/posix_time.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/posix_tls.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/posix_tls.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/posix_tls.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/posix_tls.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/posix_tls.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/posix_tls.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/posix_tls.c.o"
 },
 {
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src",
-  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/glx_context.c",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/glx_context.c",
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src -g -fPIC   -Wall -fvisibility=hidden -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/glx_context.c",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/glx_context.c",
   "output": "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/glx_context.c.o"
 }
 ]

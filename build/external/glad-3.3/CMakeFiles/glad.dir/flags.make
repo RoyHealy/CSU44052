@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = -Dglad_EXPORTS
 
-C_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include
+C_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include
 
 C_FLAGS = -g -fPIC
 

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_character.cpp" "CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o" "gcc" "CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o.d"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp" "CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o" "gcc" "CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o.d"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_character.cpp" "CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o" "gcc" "CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o.d"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp" "CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o" "gcc" "CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

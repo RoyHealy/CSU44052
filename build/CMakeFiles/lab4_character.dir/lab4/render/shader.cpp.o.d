@@ -1,9 +1,9 @@
 CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o: \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp \
  /usr/include/stdc-predef.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include/glad/gl.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include/KHR/khrplatform.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include/glad/gl.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

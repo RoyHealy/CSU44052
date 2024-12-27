@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4
+CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build
+CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,6 +143,19 @@ lab4_character/fast:
 .PHONY : lab4_character/fast
 
 #=============================================================================
+# Target rules for targets named lab2_skybox
+
+# Build rule for target.
+lab2_skybox: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab2_skybox
+.PHONY : lab2_skybox
+
+# fast build rule for target.
+lab2_skybox/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/build
+.PHONY : lab2_skybox/fast
+
+#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -167,6 +180,54 @@ glfw: cmake_check_build_system
 glfw/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
+
+lab2/lab2_skybox.o: lab2/lab2_skybox.cpp.o
+.PHONY : lab2/lab2_skybox.o
+
+# target to build an object file
+lab2/lab2_skybox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o
+.PHONY : lab2/lab2_skybox.cpp.o
+
+lab2/lab2_skybox.i: lab2/lab2_skybox.cpp.i
+.PHONY : lab2/lab2_skybox.i
+
+# target to preprocess a source file
+lab2/lab2_skybox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.i
+.PHONY : lab2/lab2_skybox.cpp.i
+
+lab2/lab2_skybox.s: lab2/lab2_skybox.cpp.s
+.PHONY : lab2/lab2_skybox.s
+
+# target to generate assembly for a file
+lab2/lab2_skybox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.s
+.PHONY : lab2/lab2_skybox.cpp.s
+
+lab2/render/shader.o: lab2/render/shader.cpp.o
+.PHONY : lab2/render/shader.o
+
+# target to build an object file
+lab2/render/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o
+.PHONY : lab2/render/shader.cpp.o
+
+lab2/render/shader.i: lab2/render/shader.cpp.i
+.PHONY : lab2/render/shader.i
+
+# target to preprocess a source file
+lab2/render/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.i
+.PHONY : lab2/render/shader.cpp.i
+
+lab2/render/shader.s: lab2/render/shader.cpp.s
+.PHONY : lab2/render/shader.s
+
+# target to generate assembly for a file
+lab2/render/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.s
+.PHONY : lab2/render/shader.cpp.s
 
 lab4/lab4_character.o: lab4/lab4_character.cpp.o
 .PHONY : lab4/lab4_character.o
@@ -253,8 +314,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... glad"
 	@echo "... glfw"
+	@echo "... lab2_skybox"
 	@echo "... lab4_character"
 	@echo "... lab4_skeleton"
+	@echo "... lab2/lab2_skybox.o"
+	@echo "... lab2/lab2_skybox.i"
+	@echo "... lab2/lab2_skybox.s"
+	@echo "... lab2/render/shader.o"
+	@echo "... lab2/render/shader.i"
+	@echo "... lab2/render/shader.s"
 	@echo "... lab4/lab4_character.o"
 	@echo "... lab4/lab4_character.i"
 	@echo "... lab4/lab4_character.s"

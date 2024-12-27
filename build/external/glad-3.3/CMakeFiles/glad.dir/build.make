@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4
+CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build
+CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build
 
 # Include any dependencies generated for this target.
 include external/glad-3.3/CMakeFiles/glad.dir/depend.make
@@ -70,18 +70,18 @@ include external/glad-3.3/CMakeFiles/glad.dir/progress.make
 include external/glad-3.3/CMakeFiles/glad.dir/flags.make
 
 external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o: external/glad-3.3/CMakeFiles/glad.dir/flags.make
-external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c
+external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c
 external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o: external/glad-3.3/CMakeFiles/glad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o"
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o -MF CMakeFiles/glad.dir/src/gl.c.o.d -o CMakeFiles/glad.dir/src/gl.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o"
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o -MF CMakeFiles/glad.dir/src/gl.c.o.d -o CMakeFiles/glad.dir/src/gl.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c
 
 external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glad.dir/src/gl.c.i"
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c > CMakeFiles/glad.dir/src/gl.c.i
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c > CMakeFiles/glad.dir/src/gl.c.i
 
 external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glad.dir/src/gl.c.s"
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/src/gl.c -o CMakeFiles/glad.dir/src/gl.c.s
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c -o CMakeFiles/glad.dir/src/gl.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -93,18 +93,18 @@ glad_EXTERNAL_OBJECTS =
 libglad.so: external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o
 libglad.so: external/glad-3.3/CMakeFiles/glad.dir/build.make
 libglad.so: external/glad-3.3/CMakeFiles/glad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library ../../libglad.so"
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library ../../libglad.so"
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 external/glad-3.3/CMakeFiles/glad.dir/build: libglad.so
 .PHONY : external/glad-3.3/CMakeFiles/glad.dir/build
 
 external/glad-3.3/CMakeFiles/glad.dir/clean:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
 .PHONY : external/glad-3.3/CMakeFiles/glad.dir/clean
 
 external/glad-3.3/CMakeFiles/glad.dir/depend:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : external/glad-3.3/CMakeFiles/glad.dir/depend
 

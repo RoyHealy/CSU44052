@@ -1,8 +1,8 @@
 CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp \
  /usr/include/stdc-predef.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include/glad/gl.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include/KHR/khrplatform.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include/glad/gl.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -19,10 +19,10 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include/GLFW/glfw3.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/GL/gl.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/glm.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/glm.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -80,9 +80,9 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
  /usr/include/c++/13/limits /usr/include/c++/13/cassert \
  /usr/include/assert.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/fwd.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_int.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/setup.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/fwd.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_int.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/setup.hpp \
  /usr/include/c++/13/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
@@ -90,92 +90,92 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
  /usr/include/c++/13/stdlib.h /usr/include/c++/13/cstdlib \
  /usr/include/c++/13/type_traits /usr/include/c++/13/cstdint \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_float.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/precision.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/vec2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec2.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/vec3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec3.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/vec4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec4.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat2x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat2x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat2x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat2x4.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat3x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x2.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat3x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x3.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat3x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat3x4.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat4x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x2.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat4x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x3.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x3.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/mat4x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x4.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/trigonometric.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_trigonometric.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/_vectorize.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec1.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_vec1.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/exponential.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_exponential.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_exponential.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_vector_relational.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_vector_relational.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/common.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_common.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_common.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/packing.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_packing.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_packing.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_half.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/type_half.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/geometric.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_geometric.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_geometric.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/matrix.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_matrix.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_matrix.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/vector_relational.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/integer.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/detail/func_integer.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/../gtc/constants.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/../gtc/constants.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/type_ptr.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_float.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/precision.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec2.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec3.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec4.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat2x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat2x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat2x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x4.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat3x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x2.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat3x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x3.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat3x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x4.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat4x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x2.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat4x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x3.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x3.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat4x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x4.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/trigonometric.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_trigonometric.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/_vectorize.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec1.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec1.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/exponential.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_exponential.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_exponential.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_vector_relational.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_vector_relational.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/common.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_common.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_common.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/packing.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_packing.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_packing.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_half.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_half.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/geometric.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_geometric.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_geometric.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/matrix.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_matrix.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_matrix.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vector_relational.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/integer.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/func_integer.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/../gtc/constants.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/../gtc/constants.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/type_ptr.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/../gtc/quaternion.inl \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtc/type_ptr.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/string_cast.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtc/type_precision.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtc/../gtc/vec1.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtc/../gtc/vec1.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtc/type_precision.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtx/dual_quaternion.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/../gtx/dual_quaternion.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/type_ptr.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtc/type_precision.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtc/../gtc/vec1.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtc/../gtc/vec1.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtc/type_precision.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtx/dual_quaternion.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtx/dual_quaternion.inl \
  /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
@@ -234,9 +234,9 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1/glm/gtx/string_cast.inl \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.inl \
  /usr/include/c++/13/cstdarg \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3/tiny_gltf.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/c++/13/functional /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/uses_allocator.h \
@@ -311,7 +311,7 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3/json.hpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/json.hpp \
  /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
@@ -342,10 +342,10 @@ CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: \
  /usr/include/c++/13/bits/gslice_array.h \
  /usr/include/c++/13/bits/mask_array.h \
  /usr/include/c++/13/bits/indirect_array.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3/stb_image.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image.h \
  /usr/include/c++/13/math.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3/stb_image_write.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/iomanip \
  /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \

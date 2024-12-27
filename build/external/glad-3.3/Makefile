@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4
+CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build
+CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3//CMakeFiles/progress.marks
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles 0
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3//CMakeFiles/progress.marks
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/clean
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/preinstall
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/preinstall
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 external/glad-3.3/CMakeFiles/glad.dir/rule:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/CMakeFiles/glad.dir/rule
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glad-3.3/CMakeFiles/glad.dir/rule
 .PHONY : external/glad-3.3/CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ glad: external/glad-3.3/CMakeFiles/glad.dir/rule
 
 # fast build rule for target.
 glad/fast:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/build
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
 src/gl.o: src/gl.c.o
@@ -135,7 +135,7 @@ src/gl.o: src/gl.c.o
 
 # target to build an object file
 src/gl.c.o:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.o
 .PHONY : src/gl.c.o
 
 src/gl.i: src/gl.c.i
@@ -143,7 +143,7 @@ src/gl.i: src/gl.c.i
 
 # target to preprocess a source file
 src/gl.c.i:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.i
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.i
 .PHONY : src/gl.c.i
 
 src/gl.s: src/gl.c.s
@@ -151,7 +151,7 @@ src/gl.s: src/gl.c.s
 
 # target to generate assembly for a file
 src/gl.c.s:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.s
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f external/glad-3.3/CMakeFiles/glad.dir/build.make external/glad-3.3/CMakeFiles/glad.dir/src/gl.c.s
 .PHONY : src/gl.c.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

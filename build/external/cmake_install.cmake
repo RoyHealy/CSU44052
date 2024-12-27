@@ -1,4 +1,4 @@
-# Install script for directory: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external
+# Install script for directory: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glad-3.3/cmake_install.cmake")
-  include("/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/cmake_install.cmake")
+  include("/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3/cmake_install.cmake")
+  include("/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/cmake_install.cmake")
 
 endif()
 

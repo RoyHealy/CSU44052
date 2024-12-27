@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4
+CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build
+CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab4_skeleton.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/lab4_skeleton.dir/progress.make
 include CMakeFiles/lab4_skeleton.dir/flags.make
 
 CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: CMakeFiles/lab4_skeleton.dir/flags.make
-CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp
+CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp
 CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o: CMakeFiles/lab4_skeleton.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -MF CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o.d -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -MF CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o.d -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp
 
 CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp > CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp > CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.i
 
 CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/lab4_skeleton.cpp -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/lab4_skeleton.cpp -o CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.s
 
 CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o: CMakeFiles/lab4_skeleton.dir/flags.make
-CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp
+CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp
 CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o: CMakeFiles/lab4_skeleton.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -MF CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o.d -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -MF CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o.d -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp
 
 CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp > CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp > CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i
 
 CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4/render/shader.cpp -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp -o CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s
 
 # Object files for target lab4_skeleton
 lab4_skeleton_OBJECTS = \
@@ -122,7 +122,7 @@ lab4_skeleton: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 lab4_skeleton: /usr/lib/x86_64-linux-gnu/libXcursor.so
 lab4_skeleton: /usr/lib/x86_64-linux-gnu/libGL.so
 lab4_skeleton: CMakeFiles/lab4_skeleton.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab4_skeleton"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab4_skeleton"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab4_skeleton.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -134,6 +134,6 @@ CMakeFiles/lab4_skeleton.dir/clean:
 .PHONY : CMakeFiles/lab4_skeleton.dir/clean
 
 CMakeFiles/lab4_skeleton.dir/depend:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles/lab4_skeleton.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles/lab4_skeleton.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/lab4_skeleton.dir/depend
 

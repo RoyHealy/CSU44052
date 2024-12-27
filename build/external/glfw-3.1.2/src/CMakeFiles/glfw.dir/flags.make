@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = -D_GLFW_USE_CONFIG_H -Dglfw_EXPORTS
 
-C_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2/src
+C_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2/src
 
 C_FLAGS = -g -fPIC   -Wall -fvisibility=hidden
 

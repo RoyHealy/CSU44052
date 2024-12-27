@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/include
+CXX_INCLUDES = -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include
 
 CXX_FLAGS = -g -std=gnu++11
 

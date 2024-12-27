@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4
+CMAKE_SOURCE_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build
+CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/external/glfw-3.1.2//CMakeFiles/progress.marks
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build/CMakeFiles 0
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glfw-3.1.2//CMakeFiles/progress.marks
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/clean
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/preinstall
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/preinstall
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/glfw-3.1.2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

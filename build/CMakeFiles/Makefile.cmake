@@ -7,17 +7,17 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/CMakeLists.txt"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/CMakeLists.txt"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glad-3.3/CMakeLists.txt"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/CMakeLists.txt"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/CMakeLists.txt"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/glfw3.pc.in"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/glfw3Config.cmake.in"
-  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/lab4/lab4/external/glfw-3.1.2/src/glfw_config.h.in"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/CMakeLists.txt"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/CMakeLists.txt"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/CMakeLists.txt"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/CMakeLists.txt"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/glfw3.pc.in"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/glfw3Config.cmake.in"
+  "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/src/glfw_config.h.in"
   "/usr/share/cmake-3.28/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
@@ -78,6 +78,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lab4_skeleton.dir/DependInfo.cmake"
   "CMakeFiles/lab4_character.dir/DependInfo.cmake"
+  "CMakeFiles/lab2_skybox.dir/DependInfo.cmake"
   "external/glad-3.3/CMakeFiles/glad.dir/DependInfo.cmake"
   "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )

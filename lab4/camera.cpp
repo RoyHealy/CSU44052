@@ -15,56 +15,62 @@
 
 const float speed = 20.f;
 // OpenGL camera view parameters
-static glm::vec3 eye_center(-278.0f, 273.0f, 800.0f);
-static glm::vec3 lookat(-278.0f, 273.0f, 0.0f);
+static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
+static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
 static glm::vec3 up(0.0f, 1.0f, 0.0f);
 static float FoV = 45.0f;
 static float zNear = 600.0f;
 static float zFar = 3000.0f; 
 
+int main(void) {
+
+	// Ensure we can capture the escape key being pressed below
+	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+	glfwSetKeyCallback(window, key_callback);
+
+	glfwSetCursorPosCallback(window, cursor_callback);
+
+}
+
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
 {
 	if (key == GLFW_KEY_R && action == GLFW_PRESS)
 	{
-		eye_center = glm::vec3(-278.0f, 273.0f, 800.0f);
-		lightPosition = glm::vec3(-275.0f, 500.0f, -275.0f);
+		eye_center = glm::vec3(0.0f, 0.0f, 0.0f);
+		// lightPosition = glm::vec3(-275.0f, 500.0f, -275.0f);
 
 	}
+	glm::vec3 forwardSpeed = speed*lookdirection;
+	glm::vec3 sideSpeed = speed*glm::cross(up, lookdirection);
 
-	if (key == GLFW_KEY_UP && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	if ((key == GLFW_KEY_W || key == GLFW_KEY_UP) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
-		eye_center.y += 20.0f;
+		eye_center += forwardSpeed
 	}
 
-	if (key == GLFW_KEY_DOWN && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	if ((key == GLFW_KEY_S || key == GLFW_KEY_DOWN) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
-		eye_center.y -= 20.0f;
+		eye_center -= forwardSpeed;
 	}
 
-	if (key == GLFW_KEY_LEFT && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	if ((key == GLFW_KEY_A || key == GLFW_KEY_LEFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
-		eye_center.x -= 20.0f;
+		eye_center += sideSpeed;
 	}
 
-	if (key == GLFW_KEY_RIGHT && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	if ((key == GLFW_KEY_D || key == GLFW_KEY_RIGHT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
-		eye_center.x += 20.0f;
-	}
-
-	if (key == GLFW_KEY_W && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		lightPosition.z -= 20.0f;
-	}
-
-	if (key == GLFW_KEY_S && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		lightPosition.z += 20.0f;
+		eye_center -= sideSpeed;
 	}
 	    
 	if (key == GLFW_KEY_SPACE && (action == GLFW_REPEAT || action == GLFW_PRESS)) 
     {
-        saveDepth = true;
+        eye_center.y += speed;
     }
+	if ((key == GLFW_KEY_LEFT_SHIFT || key == GLFW_KEY_RIGHT_SHIFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center.y -= speed;
+	}
 
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
