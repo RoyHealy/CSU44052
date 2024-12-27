@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.sln": "msbuild",
+        "iomanip": "cpp",
+        "iostream": "cpp"
+    }
+}

@@ -1,0 +1,11 @@
+we have a sun, with position relative to camera position for illumination (ortho)
+
+we have a skybox so we cant see the end of our scene
+
+we have an infitely tiled plane with a perilin noise depth map?
+
+we have an animated tree?
+
+
+Toward a Futuristic Emerald Isle
+- the beach? or Ireland?
