@@ -24,17 +24,18 @@
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
 static GLFWwindow *window;
-static int windowWidth = 1920;
-static int windowHeight = 1024;
+static int windowWidth = 1920, halfWidth = windowWidth/2;
+static int windowHeight = 1024, halfHeight = windowHeight/2;
 
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
 static void cursor_callback(GLFWwindow *window, double xpos, double ypos);
-
+static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+static float sensitivity = 2.f;
 // OpenGL camera view parameters
 static float cameraSpeed = 20.f;
 static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
 static float viewAzimuth = 0.f;
-static float viewPolar = 0.f;
+static float viewPolar = M_PI_2;
 static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
 static glm::vec3 up(0.0f, 1.0f, 0.0f);
 static float FoV = 45.0f;
@@ -1025,6 +1026,7 @@ int main(void)
 	return 0;
 }
 
+// Is called whenever a key is pressed/released via GLFW
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
 {
 	if (key == GLFW_KEY_R && action == GLFW_PRESS)
@@ -1072,53 +1074,49 @@ static void key_callback(GLFWwindow *window, int key, int scancode, int action, 
 			cameraSpeed = 20.f;
 		}
 	}
-	
+	if (eye_center.y < 1) eye_center.y = 1;
 
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 }
 
-static float prevx = 0;
-static bool mouseOutsideView = true;
-static void lookBounds(float &angle) {
-	while (angle < 0) {
-		angle = 2*M_PI + angle;
-	}
-	while (angle > 2*M_PI) {
-		angle -= 2*M_PI;
-	}
-}
+static bool mouseOutsideView = true, LMB_HELD = false;
 static void cursor_callback(GLFWwindow *window, double xpos, double ypos) {
 	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight) {
 		mouseOutsideView = true;
 		return;
 	}	
-
 	// Normalize to [0, 1] 
 	float x = xpos / windowWidth;
 	float y = ypos / windowHeight;
 
 	// To [-1, 1] and flip y up 
-	x = x * 2.0f - 1.0f;
-	// y = 1.0f - y * 2.0f;
+	x = (x * 2.0f - 1.0f)*sensitivity;
+	y = (1.0f - y * 2.0f)*sensitivity;
 
-	// const float scale = 250.0f;
-	// lightPosition.x = x * scale - 278;
-	// lightPosition.y = y * scale + 278;
 	if (mouseOutsideView) {
-		prevx = x;
+		x = 0; y = 0;
 		mouseOutsideView = false;
 	}
-	viewPolar = 2*M_PI - y*2*M_PI;
-	viewAzimuth += (x-prevx)/100  ;
-	prevx = x;
-	// lookBounds(viewAzimuth);
-	// lookBounds(viewPolar);
-	// lookdirection = glm::rotateY(lookdirection, viewAzimuth);
-	// if (0.1 < viewPolar < 2*M_PI - 0.1) {
-	// 	lookdirection = glm::rotate(lookdirection, viewPolar, glm::normalize(glm::cross(lookdirection, up)));
-	// }
-	// std::cout << lookdirection.x << "," << lookdirection.y << "," << lookdirection.z << std::endl;
-	//std::cout << lightPosition.x << " " << lightPosition.y << " " << lightPosition.z << std::endl;
-	lookdirection = glm::vec3(sin(viewAzimuth)*sin(viewPolar),sin(viewAzimuth)*cos(viewPolar),cos(viewAzimuth));
+
+	viewPolar += -y;
+	viewAzimuth += -x;
+	if (viewPolar < 0) viewPolar += M_PI*2;
+	if (viewPolar > M_PI*2) viewPolar -= M_PI*2;
+	if (viewPolar < 0.1) viewPolar = 0.1;
+	if (viewPolar > M_PI - 0.1) viewPolar = M_PI - 0.1;
+
+	// glm::vec3 sideAxis = glm::normalize(glm::cross(up, lookdirection));
+	lookdirection = glm::vec3(sin(viewPolar)*cos(viewAzimuth),cos(viewPolar),-sin(viewPolar)*sin(viewAzimuth));
+	
+	glfwSetCursorPos(window, halfWidth,halfHeight);
+}
+
+static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
+        if (action == GLFW_PRESS) 
+			LMB_HELD = true;
+		if (action == GLFW_RELEASE)
+			LMB_HELD = false;
 }

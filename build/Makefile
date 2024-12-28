@@ -143,6 +143,19 @@ lab4_character/fast:
 .PHONY : lab4_character/fast
 
 #=============================================================================
+# Target rules for targets named buildings
+
+# Build rule for target.
+buildings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 buildings
+.PHONY : buildings
+
+# fast build rule for target.
+buildings/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/build
+.PHONY : buildings/fast
+
+#=============================================================================
 # Target rules for targets named lab2_skybox
 
 # Build rule for target.
@@ -180,6 +193,30 @@ glfw: cmake_check_build_system
 glfw/fast:
 	$(MAKE) $(MAKESILENT) -f external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build.make external/glfw-3.1.2/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
+
+final-proj/buildings.o: final-proj/buildings.cpp.o
+.PHONY : final-proj/buildings.o
+
+# target to build an object file
+final-proj/buildings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/final-proj/buildings.cpp.o
+.PHONY : final-proj/buildings.cpp.o
+
+final-proj/buildings.i: final-proj/buildings.cpp.i
+.PHONY : final-proj/buildings.i
+
+# target to preprocess a source file
+final-proj/buildings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/final-proj/buildings.cpp.i
+.PHONY : final-proj/buildings.cpp.i
+
+final-proj/buildings.s: final-proj/buildings.cpp.s
+.PHONY : final-proj/buildings.s
+
+# target to generate assembly for a file
+final-proj/buildings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/final-proj/buildings.cpp.s
+.PHONY : final-proj/buildings.cpp.s
 
 lab2/lab2_skybox.o: lab2/lab2_skybox.cpp.o
 .PHONY : lab2/lab2_skybox.o
@@ -284,6 +321,7 @@ lab4/render/shader.o: lab4/render/shader.cpp.o
 lab4/render/shader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.o
 .PHONY : lab4/render/shader.cpp.o
 
 lab4/render/shader.i: lab4/render/shader.cpp.i
@@ -293,6 +331,7 @@ lab4/render/shader.i: lab4/render/shader.cpp.i
 lab4/render/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.i
 .PHONY : lab4/render/shader.cpp.i
 
 lab4/render/shader.s: lab4/render/shader.cpp.s
@@ -302,6 +341,7 @@ lab4/render/shader.s: lab4/render/shader.cpp.s
 lab4/render/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.s
 .PHONY : lab4/render/shader.cpp.s
 
 # Help Target
@@ -312,11 +352,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... buildings"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... lab2_skybox"
 	@echo "... lab4_character"
 	@echo "... lab4_skeleton"
+	@echo "... final-proj/buildings.o"
+	@echo "... final-proj/buildings.i"
+	@echo "... final-proj/buildings.s"
 	@echo "... lab2/lab2_skybox.o"
 	@echo "... lab2/lab2_skybox.i"
 	@echo "... lab2/lab2_skybox.s"
