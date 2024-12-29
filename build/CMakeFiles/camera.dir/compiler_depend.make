@@ -100,8 +100,8 @@ CMakeFiles/camera.dir/final-proj/camera.cpp.o: /home/roy/Documents/mylinuxfiles/
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image.h \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h \
+  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/buildings.cpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/terrain.cpp \
-  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.h \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
@@ -859,8 +859,6 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec2.hpp:
 
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h:
-
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h:
 
 /usr/include/c++/13/ext/alloc_traits.h:
@@ -1169,6 +1167,22 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 
 /usr/include/c++/13/ext/concurrence.h:
 
+/usr/include/linux/stat.h:
+
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/integer.hpp:
+
+/usr/include/c++/13/bits/locale_facets.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/GL/gl.h:
+
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat3x3.hpp:
+
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl:
+
+/usr/include/c++/13/bits/requires_hosted.h:
+
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_vec.hpp:
@@ -1215,6 +1229,8 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/buildings.cpp:
+
 /usr/include/c++/13/bits/stream_iterator.h:
 
 /usr/include/c++/13/bits/exception.h:
@@ -1256,22 +1272,6 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/locale_conv.h:
-
-/usr/include/linux/stat.h:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/integer.hpp:
-
-/usr/include/c++/13/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/GL/gl.h:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat3x3.hpp:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl:
-
-/usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 

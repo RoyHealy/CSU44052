@@ -352,7 +352,6 @@ CMakeFiles/camera.dir/final-proj/camera.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/terrain.cpp \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/stb/stb_image.h \

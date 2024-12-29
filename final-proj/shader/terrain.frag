@@ -17,6 +17,8 @@ void main()
 
 	// Gamma correction
 	//finalColor = vec4(pow(v, vec3(1.0 / 2.2)),1.0) * baseColorFactor;//texture(textureSampler,uv).rgb;
-
-	finalColor = vec3(height);
+	if (height < 50) {
+		finalColor = vec3(0.05f, 0.8f, 0.08f);
+	}
+	finalColor = height*vec3(0.3f, 0.95f, 0.4f);
 }

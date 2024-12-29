@@ -37,18 +37,6 @@
 },
 {
   "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/buildings.dir/final-proj/buildings.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/buildings.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/buildings.cpp",
-  "output": "CMakeFiles/buildings.dir/final-proj/buildings.cpp.o"
-},
-{
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
-  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/buildings.dir/lab4/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
-  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.cpp",
-  "output": "CMakeFiles/buildings.dir/lab4/render/shader.cpp.o"
-},
-{
-  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
   "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.cpp",
   "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.cpp",
   "output": "CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o"

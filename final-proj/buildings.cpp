@@ -5,6 +5,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/string_cast.hpp>
 
+// #include <stb/stb_image.h>
 // GLTF model loader
 #define TINYGLTF_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
@@ -18,36 +19,35 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iomanip>
-
-#include "lab2_skybox.h"
+// #include "camera.cpp"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
-static void convertGLBFile(std::string glbFilename, std::string filename);
+// static void convertGLBFile(std::string glbFilename, std::string filename);
 
-using namespace tinygltf;
+// using namespace tinygltf;
 
-static GLFWwindow *window;
-static int windowWidth = 1920, halfWidth = windowWidth/2;
-static int windowHeight = 1024, halfHeight = windowHeight/2;
+// static GLFWwindow *window;
+// static int windowWidth = 1920, halfWidth = windowWidth/2;
+// static int windowHeight = 1024, halfHeight = windowHeight/2;
 // Model model;
 // TinyGLTF loader;
 // std::string err;
 // std::string warn;
-static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
-static void cursor_callback(GLFWwindow *window, double xpos, double ypos);
-static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
-static float sensitivity = 1.5f;
-// OpenGL camera view parameters
-static float cameraSpeed = 2.f;
-static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
-static float viewAzimuth = 0.f;
-static float viewPolar = M_PI_2;
-static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
-static glm::vec3 up(0.0f, 1.0f, 0.0f);
-static float FoV = 45.0f;
-static float zNear = 1.0f;
-static float zFar = 1500.0f; 
+// static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
+// static void cursor_callback(GLFWwindow *window, double xpos, double ypos);
+// static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+// static float sensitivity = 1.5f;
+// // OpenGL camera view parameters
+// static float cameraSpeed = 2.f;
+// static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
+// static float viewAzimuth = 0.f;
+// static float viewPolar = M_PI_2;
+// static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
+// static glm::vec3 up(0.0f, 1.0f, 0.0f);
+// static float FoV = 45.0f;
+// static float zNear = 1.0f;
+// static float zFar = 1500.0f; 
 
 // Lighting  
 static glm::vec3 lightIntensity(5e6f, 5e6f, 5e6f);
@@ -628,109 +628,109 @@ struct MyAsset {
 	}
 }; 
 
-int main(void) {
-    // Initialise GLFW
-	if (!glfwInit())
-	{
-		std::cerr << "Failed to initialize GLFW." << std::endl;
-		return -1;
-	}
+// int main(void) {
+//     // Initialise GLFW
+// 	if (!glfwInit())
+// 	{
+// 		std::cerr << "Failed to initialize GLFW." << std::endl;
+// 		return -1;
+// 	}
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // For MacOS
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+// 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+// 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+// 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // For MacOS
+// 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	// Open a window and create its OpenGL context
-	GLFWwindow *window = glfwCreateWindow(1920, 1024, "proj", NULL, NULL);
-	if (window == NULL)
-	{
-		std::cerr << "Failed to open a GLFW window." << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(window);
+// 	// Open a window and create its OpenGL context
+// 	GLFWwindow *window = glfwCreateWindow(1920, 1024, "proj", NULL, NULL);
+// 	if (window == NULL)
+// 	{
+// 		std::cerr << "Failed to open a GLFW window." << std::endl;
+// 		glfwTerminate();
+// 		return -1;
+// 	}
+// 	glfwMakeContextCurrent(window);
 
-// Ensure we can capture the escape key being pressed below
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-	glfwSetKeyCallback(window, key_callback);
+// // Ensure we can capture the escape key being pressed below
+// 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+// 	glfwSetKeyCallback(window, key_callback);
 
-	glfwSetCursorPosCallback(window, cursor_callback);
-	// Load OpenGL functions, gladLoadGL returns the loaded version, 0 on error.
-	int version = gladLoadGL(glfwGetProcAddress);
-	if (version == 0)
-	{
-		std::cerr << "Failed to initialize OpenGL context." << std::endl;
-		return -1;
-	}
+// 	glfwSetCursorPosCallback(window, cursor_callback);
+// 	// Load OpenGL functions, gladLoadGL returns the loaded version, 0 on error.
+// 	int version = gladLoadGL(glfwGetProcAddress);
+// 	if (version == 0)
+// 	{
+// 		std::cerr << "Failed to initialize OpenGL context." << std::endl;
+// 		return -1;
+// 	}
 
-	// Background
-	glClearColor(0.2f, 0.2f, 0.25f, 0.0f);
+// 	// Background
+// 	glClearColor(0.2f, 0.2f, 0.25f, 0.0f);
 
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
+// 	glEnable(GL_DEPTH_TEST);
+// 	glEnable(GL_CULL_FACE);
 
-	std::string filename = "skyscraperB";
-	std::string filepath = "../final-proj/models/" + filename + ".gltf";
+// 	std::string filename = "skyscraperB";
+// 	std::string filepath = "../final-proj/models/" + filename + ".gltf";
 
-	// Our 3D asset
-    MyAsset buildingA;
-    buildingA.initialize(filepath.c_str());
+// 	// Our 3D asset
+//     MyAsset buildingA;
+//     buildingA.initialize(filepath.c_str());
 
-	// Camera setup
-    glm::mat4 viewMatrix, projectionMatrix;
-	projectionMatrix = glm::perspective(glm::radians(FoV), (float)windowWidth / windowHeight, zNear, zFar);
+// 	// Camera setup
+//     glm::mat4 viewMatrix, projectionMatrix;
+// 	projectionMatrix = glm::perspective(glm::radians(FoV), (float)windowWidth / windowHeight, zNear, zFar);
 
-	// Time and frame rate tracking
-	static double lastTime = glfwGetTime();
-	float time = 0.0f;			// Animation time 
-	float fTime = 0.0f;			// Time for measuring fps
-	unsigned long frames = 0;
+// 	// Time and frame rate tracking
+// 	static double lastTime = glfwGetTime();
+// 	float time = 0.0f;			// Animation time 
+// 	float fTime = 0.0f;			// Time for measuring fps
+// 	unsigned long frames = 0;
 
-	// Main loop
-	do
-	{
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+// 	// Main loop
+// 	do
+// 	{
+// 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		
-		// Update states for animation
-        double currentTime = glfwGetTime();
-        float deltaTime = float(currentTime - lastTime);
-		lastTime = currentTime;
-		// Rendering
-		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
-		glm::mat4 vp = projectionMatrix * viewMatrix;
-		buildingA.render(vp);
-		// FPS tracking 
-		// Count number of frames over a few seconds and take average
-		frames++;
-		fTime += deltaTime;
-		if (fTime > 2.0f) {		
-			float fps = frames / fTime;
-			frames = 0;
-			fTime = 0;
+// 		// Update states for animation
+//         double currentTime = glfwGetTime();
+//         float deltaTime = float(currentTime - lastTime);
+// 		lastTime = currentTime;
+// 		// Rendering
+// 		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
+// 		glm::mat4 vp = projectionMatrix * viewMatrix;
+// 		buildingA.render(vp);
+// 		// FPS tracking 
+// 		// Count number of frames over a few seconds and take average
+// 		frames++;
+// 		fTime += deltaTime;
+// 		if (fTime > 2.0f) {		
+// 			float fps = frames / fTime;
+// 			frames = 0;
+// 			fTime = 0;
 			
-			std::stringstream stream;
-			stream << std::fixed << std::setprecision(2) << "Lab 4 | Frames per second (FPS): " << fps;
-			glfwSetWindowTitle(window, stream.str().c_str());
-		}
+// 			std::stringstream stream;
+// 			stream << std::fixed << std::setprecision(2) << "Lab 4 | Frames per second (FPS): " << fps;
+// 			glfwSetWindowTitle(window, stream.str().c_str());
+// 		}
 
-		// Swap buffers
-		glfwSwapBuffers(window);
-		glfwPollEvents();
+// 		// Swap buffers
+// 		glfwSwapBuffers(window);
+// 		glfwPollEvents();
 
-	} // Check if the ESC key was pressed or the window was closed
-	while (!glfwWindowShouldClose(window));
+// 	} // Check if the ESC key was pressed or the window was closed
+// 	while (!glfwWindowShouldClose(window));
 
-    buildingA.cleanup();
+//     buildingA.cleanup();
 
-	// Close OpenGL window and terminate GLFW
-	glfwTerminate();
+// 	// Close OpenGL window and terminate GLFW
+// 	glfwTerminate();
 
-	return 0;
+// 	return 0;
 
-    // convertGLBFile("../final-proj/models-glb/skyscraperA.glb", "../final-proj/models/skyscraperA");
-}
+//     // convertGLBFile("../final-proj/models-glb/skyscraperA.glb", "../final-proj/models/skyscraperA");
+// }
 
 // static void convertGLBFile(std::string glbFilename, std::string filename) {
 
@@ -770,98 +770,98 @@ int main(void) {
 
 
 // Is called whenever a key is pressed/released via GLFW
-static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
-{
-	if (key == GLFW_KEY_R && action == GLFW_PRESS)
-	{
-		eye_center = glm::vec3(0.0f, 0.0f, 0.0f);
-		// lightPosition = glm::vec3(-275.0f, 500.0f, -275.0f);
+// static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
+// {
+// 	if (key == GLFW_KEY_R && action == GLFW_PRESS)
+// 	{
+// 		eye_center = glm::vec3(0.0f, 0.0f, 0.0f);
+// 		// lightPosition = glm::vec3(-275.0f, 500.0f, -275.0f);
 
-	}
-	glm::vec3 forwardSpeed = cameraSpeed*lookdirection;
-	glm::vec3 sideSpeed = cameraSpeed*glm::cross(up, lookdirection);
+// 	}
+// 	glm::vec3 forwardSpeed = cameraSpeed*lookdirection;
+// 	glm::vec3 sideSpeed = cameraSpeed*glm::cross(up, lookdirection);
 
-	if ((key == GLFW_KEY_W || key == GLFW_KEY_UP) && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		eye_center += forwardSpeed;
-	}
+// 	if ((key == GLFW_KEY_W || key == GLFW_KEY_UP) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+// 	{
+// 		eye_center += forwardSpeed;
+// 	}
 
-	if ((key == GLFW_KEY_S || key == GLFW_KEY_DOWN) && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		eye_center -= forwardSpeed;
-	}
+// 	if ((key == GLFW_KEY_S || key == GLFW_KEY_DOWN) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+// 	{
+// 		eye_center -= forwardSpeed;
+// 	}
 
-	if ((key == GLFW_KEY_A || key == GLFW_KEY_LEFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		eye_center += sideSpeed;
-	}
+// 	if ((key == GLFW_KEY_A || key == GLFW_KEY_LEFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+// 	{
+// 		eye_center += sideSpeed;
+// 	}
 
-	if ((key == GLFW_KEY_D || key == GLFW_KEY_RIGHT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		eye_center -= sideSpeed;
-	}
+// 	if ((key == GLFW_KEY_D || key == GLFW_KEY_RIGHT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+// 	{
+// 		eye_center -= sideSpeed;
+// 	}
 	    
-	if (key == GLFW_KEY_SPACE && (action == GLFW_REPEAT || action == GLFW_PRESS)) 
-    {
-        eye_center.y += cameraSpeed;
-    }
-	if ((key == GLFW_KEY_LEFT_SHIFT || key == GLFW_KEY_RIGHT_SHIFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
-	{
-		eye_center.y -= cameraSpeed;
-	}
-	if (key == GLFW_KEY_LEFT_CONTROL) {
-		if (action == GLFW_PRESS) {
-			cameraSpeed = 5.f;
-		}
-		if (action == GLFW_RELEASE) {
-			cameraSpeed = 2.f;
-		}
-	}
-	if (eye_center.y < 1) eye_center.y = 1;
+// 	if (key == GLFW_KEY_SPACE && (action == GLFW_REPEAT || action == GLFW_PRESS)) 
+//     {
+//         eye_center.y += cameraSpeed;
+//     }
+// 	if ((key == GLFW_KEY_LEFT_SHIFT || key == GLFW_KEY_RIGHT_SHIFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+// 	{
+// 		eye_center.y -= cameraSpeed;
+// 	}
+// 	if (key == GLFW_KEY_LEFT_CONTROL) {
+// 		if (action == GLFW_PRESS) {
+// 			cameraSpeed = 5.f;
+// 		}
+// 		if (action == GLFW_RELEASE) {
+// 			cameraSpeed = 2.f;
+// 		}
+// 	}
+// 	if (eye_center.y < 1) eye_center.y = 1;
 
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GL_TRUE);
-}
+// 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+// 		glfwSetWindowShouldClose(window, GL_TRUE);
+// }
 
-static bool mouseOutsideView = true, LMB_HELD = false;
-static void cursor_callback(GLFWwindow *window, double xpos, double ypos) {
-	int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
-	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight || !focused) {
-		mouseOutsideView = true;
-		return;
-	}	
+// static bool mouseOutsideView = true, LMB_HELD = false;
+// static void cursor_callback(GLFWwindow *window, double xpos, double ypos) {
+// 	int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
+// 	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight || !focused) {
+// 		mouseOutsideView = true;
+// 		return;
+// 	}	
 
-	// Normalize to [0, 1] 
-	float x = xpos / windowWidth;
-	float y = ypos / windowHeight;
+// 	// Normalize to [0, 1] 
+// 	float x = xpos / windowWidth;
+// 	float y = ypos / windowHeight;
 
-	// To [-1, 1] and flip y up 
-	x = (x * 2.0f - 1.0f)*sensitivity;
-	y = (1.0f - y * 2.0f)*sensitivity;
+// 	// To [-1, 1] and flip y up 
+// 	x = (x * 2.0f - 1.0f)*sensitivity;
+// 	y = (1.0f - y * 2.0f)*sensitivity;
 
-	if (mouseOutsideView) {
-		x = y = 0;
-		mouseOutsideView = false;
-	}
+// 	if (mouseOutsideView) {
+// 		x = y = 0;
+// 		mouseOutsideView = false;
+// 	}
 
-	viewPolar += -y;
-	viewAzimuth += -x;
-	if (viewPolar < 0) viewPolar += M_PI*2;
-	if (viewPolar > M_PI*2) viewPolar -= M_PI*2;
-	if (viewPolar < 0.1) viewPolar = 0.1;
-	if (viewPolar > M_PI - 0.1) viewPolar = M_PI - 0.1;
+// 	viewPolar += -y;
+// 	viewAzimuth += -x;
+// 	if (viewPolar < 0) viewPolar += M_PI*2;
+// 	if (viewPolar > M_PI*2) viewPolar -= M_PI*2;
+// 	if (viewPolar < 0.1) viewPolar = 0.1;
+// 	if (viewPolar > M_PI - 0.1) viewPolar = M_PI - 0.1;
 
-	// glm::vec3 sideAxis = glm::normalize(glm::cross(up, lookdirection));
-	lookdirection = glm::vec3(sin(viewPolar)*cos(viewAzimuth),cos(viewPolar),-sin(viewPolar)*sin(viewAzimuth));
+// 	// glm::vec3 sideAxis = glm::normalize(glm::cross(up, lookdirection));
+// 	lookdirection = glm::vec3(sin(viewPolar)*cos(viewAzimuth),cos(viewPolar),-sin(viewPolar)*sin(viewAzimuth));
 	
-	glfwSetCursorPos(window, halfWidth,halfHeight);
-}
+// 	glfwSetCursorPos(window, halfWidth,halfHeight);
+// }
 
-static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
-{
-    if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
-        if (action == GLFW_PRESS) 
-			LMB_HELD = true;
-		if (action == GLFW_RELEASE)
-			LMB_HELD = false;
-}
+// static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+// {
+//     if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
+//         if (action == GLFW_PRESS) 
+// 			LMB_HELD = true;
+// 		if (action == GLFW_RELEASE)
+// 			LMB_HELD = false;
+// }

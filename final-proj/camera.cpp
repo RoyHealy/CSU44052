@@ -1,18 +1,3 @@
-// #include <glad/gl.h>
-// #include <GLFW/glfw3.h>
-// #include <glm/glm.hpp>
-// #include <glm/gtc/matrix_transform.hpp>
-// #include <glm/gtx/rotate_vector.hpp>
-// #include <render/shader.h>
-
-// #define STB_IMAGE_IMPLEMENTATION
-// #include <stb/stb_image.h>
-
-// #include <vector>
-// #include <iostream>
-// #define _USE_MATH_DEFINES
-// #include <math.h>
-// #include "lab2_skybox.h"
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -20,6 +5,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/string_cast.hpp>
 
+// #include <stb/stb_image.h>
 // GLTF model loader
 #define TINYGLTF_IMPLEMENTATION
 #include <tiny_gltf.h>
@@ -32,8 +18,9 @@
 #include <math.h>
 #include <iomanip>
 
-#include "lab2_skybox.h"
+// #include "lab2_skybox.h"
 #include "terrain.cpp"
+// #include "buildings.cpp"
 
 static GLFWwindow *window;
 static int windowWidth = 1920, halfWidth = windowWidth/2;
@@ -44,7 +31,7 @@ static void mouse_button_callback(GLFWwindow* window, int button, int action, in
 static float sensitivity = 1.5f;
 // OpenGL camera view parameters
 static float cameraSpeed = 2.f;
-static glm::vec3 eye_center(0.0f, 2.0f, 0.0f);
+static glm::vec3 eye_center(0.0f, 70.0f, 0.0f);
 static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
 static glm::vec3 up(0, 1, 0);
 
@@ -52,7 +39,7 @@ static glm::vec3 up(0, 1, 0);
 static float viewAzimuth = 0.f;
 static float viewPolar = M_PI_2;
 // static float viewDistance = 300.0f;
-static glm::float32 zNear = 0.1f, zFar = 4000.f, FoV = 45;
+static glm::float32 zNear = 0.1f, zFar = 5200.f, FoV = 45;
 
 
 
@@ -155,7 +142,7 @@ int main(void)
     // MyAsset buildingA;
     // buildingA.initialize(filepath.c_str());
 	Skybox box;
-	box.initialize(glm::vec3(0, 0, 0), glm::vec3(1500, 1500, 1500));
+	box.initialize(glm::vec3(0, 0, 0), glm::vec3(3000, 3000, 3000));
 
 	Terrain t;
 	t.initialise();

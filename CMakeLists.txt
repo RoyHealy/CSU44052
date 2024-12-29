@@ -49,17 +49,6 @@ target_link_libraries(camera
 	glad
 )
 
-
-add_executable(buildings
-	final-proj/buildings.cpp
-	lab4/render/shader.cpp
-)
-target_link_libraries(buildings
-	${OPENGL_LIBRARY}
-	glfw
-	glad
-)
-
 add_executable(lab2_skybox
 	lab2/lab2_skybox.cpp
 	lab2/render/shader.cpp
