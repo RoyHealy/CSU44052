@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -rdynamic "CMakeFiles/buildings.dir/final-proj/buildings.cpp.o" CMakeFiles/buildings.dir/lab4/render/shader.cpp.o -o buildings  -Wl,-rpath,/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build -lGL -lGLU libglfw.so.3.1 libglad.so -Wl,-Bstatic -lrt -Wl,-Bdynamic -lm -lX11 -lXrandr -lXinerama -lXi -lXxf86vm -lXcursor -lGL -ldl 
