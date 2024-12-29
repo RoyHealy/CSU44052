@@ -11,13 +11,13 @@ out vec3 worldPosition;
 //out vec2 uv;
 
 uniform sampler2D sampleHeightMap;
-uniform vec2 chunk;
+uniform float chunk[2];
 uniform mat4 MVP;
 
 float chunkSize = 2000.f;
 
 void main() {
-    vec2 uv = (vertexPosition/chunkSize)-chunk;
+    vec2 uv = (vertexPosition/chunkSize)-vec2(chunk[0],chunk[1]);
     float height = texture(sampleHeightMap, uv).r;
     // Transform vertex
     vec4 jointPos = vec4(vertexPosition.x, height, vertexPosition.y, 1.0);

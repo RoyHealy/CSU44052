@@ -103,6 +103,7 @@ struct Terrain {
         for (auto off : offset) {
             int x = chunkX+off.x;
             int y = chunkX+off.x;
+            std::cout << "chunk (" << x << ", " << y << ")" << std::endl;
             GLuint heightMap = getChunk(x, y);
             glUseProgram(terrainProgramID);
 
@@ -114,7 +115,7 @@ struct Terrain {
 
             glm::mat4 modelMatrix = glm::mat4();    
             // Scale the box along each axis to make it look like a building
-            modelMatrix = glm::translate(modelMatrix, glm::vec3(x,0,y));
+            modelMatrix = glm::translate(modelMatrix, glm::vec3(x,0,y)*chunkSize);
             modelMatrix = glm::scale(modelMatrix, glm::vec3(chunkSize/width,1,chunkSize/height)); // lets hope the order is right
             // Set model-view-projection matrix
             glm::mat4 mvp = viewpoint * modelMatrix;
@@ -125,6 +126,7 @@ struct Terrain {
             glBindTexture(GL_TEXTURE_2D, heightMap);
             glUniform1i(heightMapID, 0); 
             // ------------------------------------------
+            glUniform2f(chunkID, x, y);
 
             // Draw the box
             glDrawElements(

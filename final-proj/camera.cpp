@@ -43,10 +43,10 @@ static int windowHeight = 1024, halfHeight = windowHeight/2;
 static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
 static void cursor_callback(GLFWwindow *window, double xpos, double ypos);
 static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
-static float sensitivity = 2.f;
+static float sensitivity = 1.5f;
 // OpenGL camera view parameters
-static float cameraSpeed = 20.f;
-static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
+static float cameraSpeed = 2.f;
+static glm::vec3 eye_center(0.0f, 2.0f, 0.0f);
 static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
 static glm::vec3 up(0, 1, 0);
 
@@ -54,7 +54,7 @@ static glm::vec3 up(0, 1, 0);
 static float viewAzimuth = 0.f;
 static float viewPolar = M_PI_2;
 // static float viewDistance = 300.0f;
-static glm::float32 zNear = 0.1f, zFar = 4000.f, FoV = 45;
+static glm::float32 zNear = 0.1f, zFar = 3500.f, FoV = 45;
 
 
 static GLuint LoadTextureSkyBox(const char *texture_file_path) {
@@ -556,10 +556,10 @@ static void key_callback(GLFWwindow *window, int key, int scancode, int action, 
 	}
 	if (key == GLFW_KEY_LEFT_CONTROL) {
 		if (action == GLFW_PRESS) {
-			cameraSpeed = 50.f;
+			cameraSpeed = 5.f;
 		}
 		if (action == GLFW_RELEASE) {
-			cameraSpeed = 20.f;
+			cameraSpeed = 2.f;
 		}
 	}
 	if (eye_center.y < 1) eye_center.y = 1;
