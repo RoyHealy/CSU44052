@@ -250,7 +250,7 @@ struct Skybox {
 		glGenBuffers(1, &indexBufferID);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(index_buffer_data), index_buffer_data, GL_STATIC_DRAW);
-
+		glBindVertexArray(0);
 		// Create and compile our GLSL program from the shaders
 		programID = LoadShadersFromFile("../lab2/sbox.vert", "../lab2/sbox.frag");
 		if (programID == 0)
@@ -277,7 +277,7 @@ struct Skybox {
 	void render(glm::mat4 cameraMatrix, glm::vec3 pos) {
 		this->position = pos;
 		glUseProgram(programID);
-
+		glBindVertexArray(vertexArrayID);
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
@@ -322,6 +322,7 @@ struct Skybox {
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
         glDisableVertexAttribArray(2);
+		glBindVertexArray(0);
 	}
 
 	void cleanup() {
@@ -375,6 +376,7 @@ struct Terrain {
 		glGenBuffers(1, &indexBufferID);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferID);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indexBuffer), indexBuffer, GL_STATIC_DRAW);
+		glBindVertexArray(0);
 
         terrainProgramID = LoadShadersFromFile("../final-proj/shader/terrain.vert", "../final-proj/shader/terrain.frag");
 		if (terrainProgramID == 0)
@@ -419,7 +421,7 @@ struct Terrain {
             // std::cout << "chunk (" << x << ", " << y << ")" << std::endl;
             GLuint heightMap = getChunk(x, y);
             glUseProgram(terrainProgramID);
-
+			glBindVertexArray(vertexArrayID);
             glEnableVertexAttribArray(0);
             glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
             glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
@@ -454,6 +456,7 @@ struct Terrain {
             );
 
             glDisableVertexAttribArray(0);
+			glBindVertexArray(0);
         }
     }
 };
@@ -617,6 +620,7 @@ struct MyAsset {
 	GLuint baseColorFactorID;
 	GLuint textureID;
 	GLuint programID;
+	GLuint instanceID;
 
 	tinygltf::Model model;
 
@@ -1006,6 +1010,7 @@ struct MyAsset {
 		baseColorFactorID = glGetUniformLocation(programID, "baseColorFactor");
 		lightPositionID = glGetUniformLocation(programID, "lightPosition");
 		lightIntensityID = glGetUniformLocation(programID, "lightIntensity");
+		instanceID = glGetUniformLocation(programID, "offsets");
 	}
 
 	void bindMesh(std::vector<PrimitiveObject> &primitiveObjects,
@@ -1130,9 +1135,9 @@ struct MyAsset {
 			glUniform4fv(baseColorFactorID, 1, &k[0]);
 
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbos.at(indexAccessor.bufferView));
-			glDrawElements(primitive.mode, indexAccessor.count,
+			glDrawElementsInstanced(primitive.mode, indexAccessor.count,
 						indexAccessor.componentType,
-						BUFFER_OFFSET(indexAccessor.byteOffset));
+						BUFFER_OFFSET(indexAccessor.byteOffset), 25);
 			glBindVertexArray(0);
 		}
 	}
@@ -1156,7 +1161,7 @@ struct MyAsset {
 		}
 	}
 
-	void render(glm::mat4 cameraMatrix) {
+	void render(glm::mat4 cameraMatrix, glm::vec3 translations[25]) {
 		glUseProgram(programID);
 		// Set camera
 		glm::mat4 mvp = cameraMatrix;
@@ -1165,6 +1170,8 @@ struct MyAsset {
 		// TODO: Set animation data for linear blend skinning in shader
 		// -----------------------------------------------------------------
 		// glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
+		
+		glUniformMatrix3fv(instanceID, 25, GL_FALSE, &translations[0][0]); // instancing
 		// -----------------------------------------------------------------
 		// Set light data 
 		glUniform3fv(lightPositionID, 1, &lightPosition[0]);

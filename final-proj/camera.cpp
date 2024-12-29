@@ -139,8 +139,24 @@ int main(void)
 	std::string filepath = "../final-proj/models/" + filename + ".gltf";
 
 	// Our 3D asset
-    // MyAsset buildingA;
-    // buildingA.initialize(filepath.c_str());
+    MyAsset buildingA;
+    buildingA.initialize(filepath.c_str());
+
+	glm::vec3 translations[25];
+	int index = 0;
+	float offset = 2.f;
+	for(int z = -5; z < 5; z += 2)
+	{
+		for(int x = -5; x < 5; x += 2)
+		{
+			glm::vec3 translation;
+			translation.x = (float)x* offset;
+			translation.y = 0.f;
+			translation.z = (float)z* offset;
+			translations[index++] = translation;
+		}
+	}  
+
 	Skybox box;
 	box.initialize(glm::vec3(0, 0, 0), glm::vec3(3000, 3000, 3000));
 
@@ -175,6 +191,7 @@ int main(void)
 		glm::mat4 vp = projectionMatrix * viewMatrix;
 		box.render(vp, eye_center);
 		t.render(eye_center, vp);
+		buildingA.render(vp, translations);
 		// FPS tracking 
 		// Count number of frames over a few seconds and take average
 		frames++;

@@ -3,6 +3,7 @@
 in vec3 worldPosition;
 in vec3 worldNormal; 
 in vec2 uv;
+in float instanceNo;
 
 out vec4 finalColor;
 // uniform sampler2D textureSampler;
@@ -23,5 +24,5 @@ void main()
 	v = v / (1.0 + v);
 
 	// Gamma correction
-	finalColor = vec4(pow(v, vec3(1.0 / 2.2)),1.0) * baseColorFactor;//texture(textureSampler,uv).rgb;
+	finalColor = vec4(pow(v, vec3(1.0 / 2.2)),1.0) * baseColorFactor*instanceNo/25.f;//texture(textureSampler,uv).rgb;
 }
