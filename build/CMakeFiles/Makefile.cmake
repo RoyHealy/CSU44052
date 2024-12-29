@@ -78,9 +78,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lab4_skeleton.dir/DependInfo.cmake"
   "CMakeFiles/lab4_character.dir/DependInfo.cmake"
+  "CMakeFiles/camera.dir/DependInfo.cmake"
   "CMakeFiles/buildings.dir/DependInfo.cmake"
   "CMakeFiles/lab2_skybox.dir/DependInfo.cmake"
-  "CMakeFiles/terrain.dir/DependInfo.cmake"
   "external/glad-3.3/CMakeFiles/glad.dir/DependInfo.cmake"
   "external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )

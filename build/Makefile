@@ -143,6 +143,19 @@ lab4_character/fast:
 .PHONY : lab4_character/fast
 
 #=============================================================================
+# Target rules for targets named camera
+
+# Build rule for target.
+camera: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera
+.PHONY : camera
+
+# fast build rule for target.
+camera/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/build
+.PHONY : camera/fast
+
+#=============================================================================
 # Target rules for targets named buildings
 
 # Build rule for target.
@@ -167,19 +180,6 @@ lab2_skybox: cmake_check_build_system
 lab2_skybox/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/build
 .PHONY : lab2_skybox/fast
-
-#=============================================================================
-# Target rules for targets named terrain
-
-# Build rule for target.
-terrain: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 terrain
-.PHONY : terrain
-
-# fast build rule for target.
-terrain/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/build
-.PHONY : terrain/fast
 
 #=============================================================================
 # Target rules for targets named glad
@@ -231,29 +231,29 @@ final-proj/buildings.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/final-proj/buildings.cpp.s
 .PHONY : final-proj/buildings.cpp.s
 
-final-proj/terrain.o: final-proj/terrain.cpp.o
-.PHONY : final-proj/terrain.o
+final-proj/camera.o: final-proj/camera.cpp.o
+.PHONY : final-proj/camera.o
 
 # target to build an object file
-final-proj/terrain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/final-proj/terrain.cpp.o
-.PHONY : final-proj/terrain.cpp.o
+final-proj/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/final-proj/camera.cpp.o
+.PHONY : final-proj/camera.cpp.o
 
-final-proj/terrain.i: final-proj/terrain.cpp.i
-.PHONY : final-proj/terrain.i
+final-proj/camera.i: final-proj/camera.cpp.i
+.PHONY : final-proj/camera.i
 
 # target to preprocess a source file
-final-proj/terrain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/final-proj/terrain.cpp.i
-.PHONY : final-proj/terrain.cpp.i
+final-proj/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/final-proj/camera.cpp.i
+.PHONY : final-proj/camera.cpp.i
 
-final-proj/terrain.s: final-proj/terrain.cpp.s
-.PHONY : final-proj/terrain.s
+final-proj/camera.s: final-proj/camera.cpp.s
+.PHONY : final-proj/camera.s
 
 # target to generate assembly for a file
-final-proj/terrain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/final-proj/terrain.cpp.s
-.PHONY : final-proj/terrain.cpp.s
+final-proj/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/final-proj/camera.cpp.s
+.PHONY : final-proj/camera.cpp.s
 
 lab2/lab2_skybox.o: lab2/lab2_skybox.cpp.o
 .PHONY : lab2/lab2_skybox.o
@@ -358,8 +358,8 @@ lab4/render/shader.o: lab4/render/shader.cpp.o
 lab4/render/shader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/lab4/render/shader.cpp.o
 .PHONY : lab4/render/shader.cpp.o
 
 lab4/render/shader.i: lab4/render/shader.cpp.i
@@ -369,8 +369,8 @@ lab4/render/shader.i: lab4/render/shader.cpp.i
 lab4/render/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/lab4/render/shader.cpp.i
 .PHONY : lab4/render/shader.cpp.i
 
 lab4/render/shader.s: lab4/render/shader.cpp.s
@@ -380,8 +380,8 @@ lab4/render/shader.s: lab4/render/shader.cpp.s
 lab4/render/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/buildings.dir/build.make CMakeFiles/buildings.dir/lab4/render/shader.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/lab4/render/shader.cpp.s
 .PHONY : lab4/render/shader.cpp.s
 
 # Help Target
@@ -393,18 +393,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... buildings"
+	@echo "... camera"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... lab2_skybox"
 	@echo "... lab4_character"
 	@echo "... lab4_skeleton"
-	@echo "... terrain"
 	@echo "... final-proj/buildings.o"
 	@echo "... final-proj/buildings.i"
 	@echo "... final-proj/buildings.s"
-	@echo "... final-proj/terrain.o"
-	@echo "... final-proj/terrain.i"
-	@echo "... final-proj/terrain.s"
+	@echo "... final-proj/camera.o"
+	@echo "... final-proj/camera.i"
+	@echo "... final-proj/camera.s"
 	@echo "... lab2/lab2_skybox.o"
 	@echo "... lab2/lab2_skybox.i"
 	@echo "... lab2/lab2_skybox.s"

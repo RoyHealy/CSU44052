@@ -732,41 +732,41 @@ int main(void) {
     // convertGLBFile("../final-proj/models-glb/skyscraperA.glb", "../final-proj/models/skyscraperA");
 }
 
-static void convertGLBFile(std::string glbFilename, std::string filename) {
+// static void convertGLBFile(std::string glbFilename, std::string filename) {
 
-    std::ifstream binFile = std::ifstream(glbFilename, std::ios::binary); 
+//     std::ifstream binFile = std::ifstream(glbFilename, std::ios::binary); 
 
-    binFile.seekg(12); //Skip past the 12 byte header, to the json header
-    uint32_t jsonLength;
-    binFile.read((char*)&jsonLength, sizeof(uint32_t)); //Read the length of the json file from it's header
+//     binFile.seekg(12); //Skip past the 12 byte header, to the json header
+//     uint32_t jsonLength;
+//     binFile.read((char*)&jsonLength, sizeof(uint32_t)); //Read the length of the json file from it's header
 
-    std::string jsonStr;
-    jsonStr.resize(jsonLength);
-    binFile.seekg(20); // Skip the rest of the JSON header to the start of the string
-    binFile.read((char*)jsonStr.data(), jsonLength); // Read out the json string
-    // Parse the json
-    // json scene = json::parse(jsonStr);
-    // if(!scene) //jsonStr))
-    //     std::cerr << "Problem parsing assetData: " << std::endl;
+//     std::string jsonStr;
+//     jsonStr.resize(jsonLength);
+//     binFile.seekg(20); // Skip the rest of the JSON header to the start of the string
+//     binFile.read((char*)jsonStr.data(), jsonLength); // Read out the json string
+//     // Parse the json
+//     // json scene = json::parse(jsonStr);
+//     // if(!scene) //jsonStr))
+//     //     std::cerr << "Problem parsing assetData: " << std::endl;
 
-    // After reading from the json, the file cusor will automatically be at the start of the binary header
+//     // After reading from the json, the file cusor will automatically be at the start of the binary header
 
-    uint32_t binLength;
-    binFile.read((char*)&binLength, sizeof(binLength)); // Read out the bin length from it's header
-    binFile.seekg(sizeof(uint32_t), std::ios_base::cur); // skip chunk type
-    std::vector<unsigned char> bin(binLength);
-    binFile.read((char*)bin.data(), binLength);
+//     uint32_t binLength;
+//     binFile.read((char*)&binLength, sizeof(binLength)); // Read out the bin length from it's header
+//     binFile.seekg(sizeof(uint32_t), std::ios_base::cur); // skip chunk type
+//     std::vector<unsigned char> bin(binLength);
+//     binFile.read((char*)bin.data(), binLength);
 
-    // Now that we have the files read out, let's actually do something with them
-    // This code prints out all the vertex positions for the first primitive
-    std::ofstream binary(filename + ".bin", std::ios::out|std::ios::binary);
-    std::copy(bin.cbegin(), bin.cend(), std::ostream_iterator<unsigned char>(binary)); 
-    binary.close();
+//     // Now that we have the files read out, let's actually do something with them
+//     // This code prints out all the vertex positions for the first primitive
+//     std::ofstream binary(filename + ".bin", std::ios::out|std::ios::binary);
+//     std::copy(bin.cbegin(), bin.cend(), std::ostream_iterator<unsigned char>(binary)); 
+//     binary.close();
 
-    std::ofstream gltf = std::ofstream(filename + ".gltf");
-    gltf << jsonStr;
-    gltf.close();
-}
+//     std::ofstream gltf = std::ofstream(filename + ".gltf");
+//     gltf << jsonStr;
+//     gltf.close();
+// }
 
 
 // Is called whenever a key is pressed/released via GLFW

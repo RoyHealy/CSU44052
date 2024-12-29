@@ -1,18 +1,41 @@
+// #include <glad/gl.h>
+// #include <GLFW/glfw3.h>
+// #include <glm/glm.hpp>
+// #include <glm/gtc/matrix_transform.hpp>
+// #include <glm/gtx/rotate_vector.hpp>
+// #include <render/shader.h>
+
+// #define STB_IMAGE_IMPLEMENTATION
+// #include <stb/stb_image.h>
+
+// #include <vector>
+// #include <iostream>
+// #define _USE_MATH_DEFINES
+// #include <math.h>
+// #include "lab2_skybox.h"
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtx/rotate_vector.hpp>
-#include <render/shader.h>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/string_cast.hpp>
 
+// GLTF model loader
+#define TINYGLTF_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb/stb_image.h>
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include <tiny_gltf.h>
+
+#include <render/shader.h>
 
 #include <vector>
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <iomanip>
+
 #include "lab2_skybox.h"
+#include "terrain.cpp"
 
 static GLFWwindow *window;
 static int windowWidth = 1920, halfWidth = windowWidth/2;
@@ -336,8 +359,6 @@ struct Skybox {
 
 int main(void)
 {
-	Skybox b;
-	b.initialize(glm::vec3(0, 0, 0), glm::vec3(2000, 2000, 2000));
 	// // Initialise GLFW
 	// if (!glfwInit())
 	// {
@@ -384,36 +405,111 @@ int main(void)
 	// // TODO: Create more buildings
     // // ---------------------------
 	// // std::vector<Building> buildings;
-	// Skybox b;
-	// b.initialize(glm::vec3(0, 0, 0), glm::vec3(500, 500, 500));
-	// // buildings.push_back(b);
-    // // ---------------------------
+	
+	// buildings.push_back(b);
+    // ---------------------------
+// Initialise GLFW
+	if (!glfwInit())
+	{
+		std::cerr << "Failed to initialize GLFW." << std::endl;
+		return -1;
+	}
 
-	// glm::mat4 viewMatrix, projectionMatrix;
-	// projectionMatrix = glm::perspective(glm::radians(FoV), 4.0f / 3.0f, zNear, zFar);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // For MacOS
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	// do
-	// {
-	// 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	// Open a window and create its OpenGL context
+	GLFWwindow *window = glfwCreateWindow(1920, 1024, "proj", NULL, NULL);
+	if (window == NULL)
+	{
+		std::cerr << "Failed to open a GLFW window." << std::endl;
+		glfwTerminate();
+		return -1;
+	}
+	glfwMakeContextCurrent(window);
 
-	// 	viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up); // eye_center*glm::vec3(1.1,1.1,1.1)
-	// 	glm::mat4 vp = projectionMatrix * viewMatrix;
+// Ensure we can capture the escape key being pressed below
+	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+	glfwSetKeyCallback(window, key_callback);
 
-	// 	// Render the building
-	// 	b.render(vp, eye_center);
+	glfwSetCursorPosCallback(window, cursor_callback);
+	// Load OpenGL functions, gladLoadGL returns the loaded version, 0 on error.
+	int version = gladLoadGL(glfwGetProcAddress);
+	if (version == 0)
+	{
+		std::cerr << "Failed to initialize OpenGL context." << std::endl;
+		return -1;
+	}
 
-	// 	// Swap buffers
-	// 	glfwSwapBuffers(window);
-	// 	glfwPollEvents();
+	// Background
+	glClearColor(0.2f, 0.2f, 0.25f, 0.0f);
 
-	// } // Check if the ESC key was pressed or the window was closed
-	// while (!glfwWindowShouldClose(window));
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
 
-	// // Clean up
-	// b.cleanup();
+	std::string filename = "skyscraperB";
+	std::string filepath = "../final-proj/models/" + filename + ".gltf";
 
-	// // Close OpenGL window and terminate GLFW
-	// glfwTerminate();
+	// Our 3D asset
+    // MyAsset buildingA;
+    // buildingA.initialize(filepath.c_str());
+	Skybox box;
+	box.initialize(glm::vec3(0, 0, 0), glm::vec3(2000, 2000, 2000));
+
+	Terrain t;
+	t.initialise();
+
+	// Camera setup
+    glm::mat4 viewMatrix, projectionMatrix;
+	projectionMatrix = glm::perspective(glm::radians(FoV), (float)windowWidth / windowHeight, zNear, zFar);
+
+	// Time and frame rate tracking
+	static double lastTime = glfwGetTime();
+	float time = 0.0f;			// Animation time 
+	float fTime = 0.0f;			// Time for measuring fps
+	unsigned long frames = 0;
+
+	// Main loop
+	do
+	{
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		// Update states for animation
+        double currentTime = glfwGetTime();
+        float deltaTime = float(currentTime - lastTime);
+		lastTime = currentTime;
+		// Rendering
+		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
+		glm::mat4 vp = projectionMatrix * viewMatrix;
+		box.render(vp, eye_center);
+		t.render(eye_center, vp);
+		// FPS tracking 
+		// Count number of frames over a few seconds and take average
+		frames++;
+		fTime += deltaTime;
+		if (fTime > 2.0f) {		
+			float fps = frames / fTime;
+			frames = 0;
+			fTime = 0;
+			
+			std::stringstream stream;
+			stream << std::fixed << std::setprecision(2) << "Lab 4 | Frames per second (FPS): " << fps;
+			glfwSetWindowTitle(window, stream.str().c_str());
+		}
+
+		// Swap buffers
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+
+	} // Check if the ESC key was pressed or the window was closed
+	while (!glfwWindowShouldClose(window));
+
+    box.cleanup();
+
+	// Close OpenGL window and terminate GLFW
+	glfwTerminate();
 
 	return 0;
 }

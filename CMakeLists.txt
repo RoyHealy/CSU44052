@@ -38,6 +38,18 @@ target_link_libraries(lab4_character
 	glfw
 	glad
 )
+
+add_executable(camera
+	final-proj/camera.cpp
+	lab4/render/shader.cpp
+)
+target_link_libraries(camera
+	${OPENGL_LIBRARY}
+	glfw
+	glad
+)
+
+
 add_executable(buildings
 	final-proj/buildings.cpp
 	lab4/render/shader.cpp
@@ -53,16 +65,6 @@ add_executable(lab2_skybox
 	lab2/render/shader.cpp
 )
 target_link_libraries(lab2_skybox
-	${OPENGL_LIBRARY}
-	glfw
-	glad
-)
-
-add_executable(terrain
-	final-proj/terrain.cpp
-	lab4/render/shader.cpp
-)
-target_link_libraries(terrain
 	${OPENGL_LIBRARY}
 	glfw
 	glad
