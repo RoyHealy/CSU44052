@@ -236,10 +236,6 @@ CMakeFiles/buildings.dir/final-proj/buildings.cpp.o: \
  /usr/include/c++/13/bits/basic_string.tcc \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.inl \
  /usr/include/c++/13/cstdarg \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtx/transform.hpp \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/../gtx/transform.inl \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.inl \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/c++/13/functional /usr/include/c++/13/tuple \
@@ -357,5 +353,4 @@ CMakeFiles/buildings.dir/final-proj/buildings.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h \
- /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/json.hpp \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h

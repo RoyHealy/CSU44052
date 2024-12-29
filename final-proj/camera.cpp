@@ -474,7 +474,8 @@ static void key_callback(GLFWwindow *window, int key, int scancode, int action, 
 
 static bool mouseOutsideView = true, LMB_HELD = false;
 static void cursor_callback(GLFWwindow *window, double xpos, double ypos) {
-	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight) {
+	int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
+	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight || !focused) {
 		mouseOutsideView = true;
 		return;
 	}	

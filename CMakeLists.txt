@@ -57,3 +57,13 @@ target_link_libraries(lab2_skybox
 	glfw
 	glad
 )
+
+add_executable(terrain
+	final-proj/terrain.cpp
+	lab4/render/shader.cpp
+)
+target_link_libraries(terrain
+	${OPENGL_LIBRARY}
+	glfw
+	glad
+)

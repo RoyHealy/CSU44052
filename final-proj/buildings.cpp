@@ -4,7 +4,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/string_cast.hpp>
-#include <glm/gtx/rotate_vector.hpp>
 
 // GLTF model loader
 #define TINYGLTF_IMPLEMENTATION
@@ -19,7 +18,7 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iomanip>
-#include <json.hpp>
+
 #include "lab2_skybox.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
@@ -28,10 +27,27 @@ static void convertGLBFile(std::string glbFilename, std::string filename);
 
 using namespace tinygltf;
 
+static GLFWwindow *window;
+static int windowWidth = 1920, halfWidth = windowWidth/2;
+static int windowHeight = 1024, halfHeight = windowHeight/2;
 // Model model;
 // TinyGLTF loader;
 // std::string err;
 // std::string warn;
+static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
+static void cursor_callback(GLFWwindow *window, double xpos, double ypos);
+static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+static float sensitivity = 1.5f;
+// OpenGL camera view parameters
+static float cameraSpeed = 2.f;
+static glm::vec3 eye_center(0.0f, 0.0f, 0.0f);
+static float viewAzimuth = 0.f;
+static float viewPolar = M_PI_2;
+static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
+static glm::vec3 up(0.0f, 1.0f, 0.0f);
+static float FoV = 45.0f;
+static float zNear = 1.0f;
+static float zFar = 1500.0f; 
 
 // Lighting  
 static glm::vec3 lightIntensity(5e6f, 5e6f, 5e6f);
@@ -42,16 +58,16 @@ static bool playAnimation = true;
 static float playbackSpeed = 2.0f;
 
 struct MyAsset {
-	// Shader variable IDs
+// Shader variable IDs
 	GLuint mvpMatrixID;
 	GLuint jointMatricesID;
 	GLuint lightPositionID;
 	GLuint lightIntensityID;
+	GLuint baseColorFactorID;
+	GLuint textureID;
 	GLuint programID;
 
 	tinygltf::Model model;
-
-    std::vector<char> binBuffer;
 
 	// Each VAO corresponds to each mesh primitive in the GLTF model
 	struct PrimitiveObject {
@@ -389,12 +405,8 @@ struct MyAsset {
 		tinygltf::TinyGLTF loader;
 		std::string err;
 		std::string warn;
-        
-        // bool res = loader.LoadBinaryFromFile(&model, &err, &warn, filename);
+
 		bool res = loader.LoadASCIIFromFile(&model, &err, &warn, filename);
-        // std::string basedir = GetBaseDir(filename);
-        // bool res = loader.LoadBinaryFromFile(&model, &err, &warn, jsonStr.c_str(), jsonLength, basedir);
-        
 		if (!warn.empty()) {
 			std::cout << "WARN: " << warn << std::endl;
 		}
@@ -411,85 +423,43 @@ struct MyAsset {
 		return res;
 	}
 
-	void initialize(std::string filename) {
+	void initialize(const char* filename) {
 		// Modify your path if needed
-        std::string filepath = "../final-proj/models/";
-        if (!loadModel(model, (filepath + filename).c_str() )) {
+		if (!loadModel(model, filename)) {
 			return;
 		}
-        std::cerr << "loaded glb" << std::endl;
-
-        // std::cerr << &model.buffers[0].data.at(0) << std::endl;
-        // // extract json from glb
-        // std::ifstream binFile = std::ifstream(filename, std::ios::binary); 
-        // binFile.seekg(12); //Skip past the 12 byte header, to the json header
-        // uint32_t jsonLength;
-        // binFile.read((char*)&jsonLength, sizeof(uint32_t)); //Read the length of the json file from it's header
-        // binFile.seekg(20 + jsonLength*sizeof(char)); // Skip the rest of the JSON
-        // uint32_t binLength;
-        // binFile.read((char*)&binLength, sizeof(binLength)); // Read out the bin length from it's header
-        // binFile.seekg(sizeof(uint32_t), std::ios_base::cur); // skip chunk type
-        // std::vector<unsigned char> bin(binLength);
-        // binBuffer.resize(binLength);
-        // binFile.read((char*)bin.data(), binLength);
-        // // binBuffer = bin.data();
-        // model.buffers.at(0).data = bin;
-        // std::cerr << "buffer updated" << std::endl;
-        // std::cerr << &model.buffers[0].data.at(0) << std::endl;
-//Now you're free to use the data the same way we did above
-        //     // Now that we have the files read out, let's actually do something with them
-//     // This code prints out all the vertex positions for the first primitive
-
-    // // Get the primitve we want to print out: 
-    // auto& primitive = model.meshes[0].primitives[0];
-
-    
-    // // Get the accessor for position: 
-    // auto& positionAccessor = model.accessors[(int)primitive.attributes["POSITION"]];
-
-
-    // // Get the bufferView 
-    // auto& bufferView = model.bufferViews[(int)positionAccessor.bufferView];
-
-
-    // // Now get the start of the float3 array by adding the bufferView byte offset to the bin pointer
-    // // It's a little sketchy to cast to a raw float array, but hey, it works.
-    // float* buffer = (float*)(binBuffer.data() + (int)bufferView.byteOffset);
-
-    // // Print out all the vertex positions 
-    // for (int i = 0; i < (int)positionAccessor.count; ++i)
-    // {
-    //     std::cerr << "(" << buffer[i*3] << ", " << buffer[i*3 + 1] << ", " << buffer[i*3 + 2] << ")" << std::endl;
-    // }
-
-    // // And as a cherry on top, let's print out the total number of verticies
-    // std::cerr << "vertices: " << positionAccessor.count << std::endl;
+		// for (auto& buf : model.buffers) {
+			
+		// 	std::cout << buf.data.size() << std::endl;
+		// }
 
 		// Prepare buffers for rendering 
 		primitiveObjects = bindModel(model);
-        std::cerr << "objects prepared" << std::endl;
+
 		// Prepare joint matrices
 		skinObjects = prepareSkinning(model);
-        std::cerr << "objects prepared" << std::endl;
+
 		// Prepare animation data 
 		animationObjects = prepareAnimation(model);
-        std::cerr << "objects prepared" << std::endl;
+
 		// Create and compile our GLSL program from the shaders
-		programID = LoadShadersFromFile("../lab4/shader/bot.vert", "../lab4/shader/bot.frag");
+		programID = LoadShadersFromFile("../final-proj/shader/assets.vert", "../final-proj/shader/assets.frag");
 		if (programID == 0)
 		{
 			std::cerr << "Failed to load shaders." << std::endl;
 		}
-
 		// Get a handle for GLSL variables
 		mvpMatrixID = glGetUniformLocation(programID, "MVP");
-		jointMatricesID = glGetUniformLocation(programID, "u_jointMat");
+		// jointMatricesID = glGetUniformLocation(programID, "u_jointMat");
+		// textureID = glGetUniformLocation(programID, "textureSampler");
+		baseColorFactorID = glGetUniformLocation(programID, "baseColorFactor");
 		lightPositionID = glGetUniformLocation(programID, "lightPosition");
 		lightIntensityID = glGetUniformLocation(programID, "lightIntensity");
 	}
 
 	void bindMesh(std::vector<PrimitiveObject> &primitiveObjects,
 				tinygltf::Model &model, tinygltf::Mesh &mesh) {
+
 		std::map<int, GLuint> vbos;
 		for (size_t i = 0; i < model.bufferViews.size(); ++i) {
 			const tinygltf::BufferView &bufferView = model.bufferViews[i];
@@ -503,13 +473,13 @@ struct MyAsset {
 				//std::cout << "WARN: bufferView.target is zero" << std::endl;
 				continue;
 			}
-            std::cerr << "fail" << std::endl;
-			const tinygltf::Buffer &buffer = model.buffers[bufferView.buffer]; 
+
+			const tinygltf::Buffer &buffer = model.buffers[bufferView.buffer];
 			GLuint vbo;
 			glGenBuffers(1, &vbo);
 			glBindBuffer(target, vbo);
 			glBufferData(target, bufferView.byteLength,
-						&buffer.data.at(0) + bufferView.byteOffset, GL_STATIC_DRAW); // buffer.data no longer works?
+						&buffer.data.at(0) + bufferView.byteOffset, GL_STATIC_DRAW);
 			
 			vbos[i] = vbo;
 		}
@@ -581,7 +551,6 @@ struct MyAsset {
 		std::vector<PrimitiveObject> primitiveObjects;
 
 		const tinygltf::Scene &scene = model.scenes[model.defaultScene];
-
 		for (size_t i = 0; i < scene.nodes.size(); ++i) {
 			assert((scene.nodes[i] >= 0) && (scene.nodes[i] < model.nodes.size()));
 			bindModelNodes(primitiveObjects, model, model.nodes[scene.nodes[i]]);
@@ -603,12 +572,16 @@ struct MyAsset {
 			tinygltf::Primitive primitive = mesh.primitives[i];
 			tinygltf::Accessor indexAccessor = model.accessors[primitive.indices];
 
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbos.at(indexAccessor.bufferView));
+			std::vector<double> color = model.materials[primitive.material].pbrMetallicRoughness.baseColorFactor;
+			std::vector<float> k;
+			for (double d : color) k.push_back(d); 
+			// std::cout << color[0] << " " << k[0] << std::endl;
+			glUniform4fv(baseColorFactorID, 1, &k[0]);
 
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbos.at(indexAccessor.bufferView));
 			glDrawElements(primitive.mode, indexAccessor.count,
 						indexAccessor.componentType,
 						BUFFER_OFFSET(indexAccessor.byteOffset));
-
 			glBindVertexArray(0);
 		}
 	}
@@ -634,21 +607,17 @@ struct MyAsset {
 
 	void render(glm::mat4 cameraMatrix) {
 		glUseProgram(programID);
-		
 		// Set camera
 		glm::mat4 mvp = cameraMatrix;
 		glUniformMatrix4fv(mvpMatrixID, 1, GL_FALSE, &mvp[0][0]);
-
 		// -----------------------------------------------------------------
 		// TODO: Set animation data for linear blend skinning in shader
 		// -----------------------------------------------------------------
-		glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
+		// glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
 		// -----------------------------------------------------------------
-
 		// Set light data 
 		glUniform3fv(lightPositionID, 1, &lightPosition[0]);
 		glUniform3fv(lightIntensityID, 1, &lightIntensity[0]);
-
 		// Draw the GLTF model
 		drawModel(primitiveObjects, model);
 		const tinygltf::Skin &skin = model.skins[0];
@@ -660,8 +629,106 @@ struct MyAsset {
 }; 
 
 int main(void) {
+    // Initialise GLFW
+	if (!glfwInit())
+	{
+		std::cerr << "Failed to initialize GLFW." << std::endl;
+		return -1;
+	}
+
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // For MacOS
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+	// Open a window and create its OpenGL context
+	GLFWwindow *window = glfwCreateWindow(1920, 1024, "proj", NULL, NULL);
+	if (window == NULL)
+	{
+		std::cerr << "Failed to open a GLFW window." << std::endl;
+		glfwTerminate();
+		return -1;
+	}
+	glfwMakeContextCurrent(window);
+
+// Ensure we can capture the escape key being pressed below
+	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+	glfwSetKeyCallback(window, key_callback);
+
+	glfwSetCursorPosCallback(window, cursor_callback);
+	// Load OpenGL functions, gladLoadGL returns the loaded version, 0 on error.
+	int version = gladLoadGL(glfwGetProcAddress);
+	if (version == 0)
+	{
+		std::cerr << "Failed to initialize OpenGL context." << std::endl;
+		return -1;
+	}
+
+	// Background
+	glClearColor(0.2f, 0.2f, 0.25f, 0.0f);
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+
+	std::string filename = "skyscraperB";
+	std::string filepath = "../final-proj/models/" + filename + ".gltf";
+
+	// Our 3D asset
     MyAsset buildingA;
-    buildingA.initialize("skyscraperA.gltf");
+    buildingA.initialize(filepath.c_str());
+
+	// Camera setup
+    glm::mat4 viewMatrix, projectionMatrix;
+	projectionMatrix = glm::perspective(glm::radians(FoV), (float)windowWidth / windowHeight, zNear, zFar);
+
+	// Time and frame rate tracking
+	static double lastTime = glfwGetTime();
+	float time = 0.0f;			// Animation time 
+	float fTime = 0.0f;			// Time for measuring fps
+	unsigned long frames = 0;
+
+	// Main loop
+	do
+	{
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		
+		// Update states for animation
+        double currentTime = glfwGetTime();
+        float deltaTime = float(currentTime - lastTime);
+		lastTime = currentTime;
+		// Rendering
+		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
+		glm::mat4 vp = projectionMatrix * viewMatrix;
+		buildingA.render(vp);
+		// FPS tracking 
+		// Count number of frames over a few seconds and take average
+		frames++;
+		fTime += deltaTime;
+		if (fTime > 2.0f) {		
+			float fps = frames / fTime;
+			frames = 0;
+			fTime = 0;
+			
+			std::stringstream stream;
+			stream << std::fixed << std::setprecision(2) << "Lab 4 | Frames per second (FPS): " << fps;
+			glfwSetWindowTitle(window, stream.str().c_str());
+		}
+
+		// Swap buffers
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+
+	} // Check if the ESC key was pressed or the window was closed
+	while (!glfwWindowShouldClose(window));
+
+    buildingA.cleanup();
+
+	// Close OpenGL window and terminate GLFW
+	glfwTerminate();
+
+	return 0;
+
     // convertGLBFile("../final-proj/models-glb/skyscraperA.glb", "../final-proj/models/skyscraperA");
 }
 
@@ -699,4 +766,102 @@ static void convertGLBFile(std::string glbFilename, std::string filename) {
     std::ofstream gltf = std::ofstream(filename + ".gltf");
     gltf << jsonStr;
     gltf.close();
+}
+
+
+// Is called whenever a key is pressed/released via GLFW
+static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
+{
+	if (key == GLFW_KEY_R && action == GLFW_PRESS)
+	{
+		eye_center = glm::vec3(0.0f, 0.0f, 0.0f);
+		// lightPosition = glm::vec3(-275.0f, 500.0f, -275.0f);
+
+	}
+	glm::vec3 forwardSpeed = cameraSpeed*lookdirection;
+	glm::vec3 sideSpeed = cameraSpeed*glm::cross(up, lookdirection);
+
+	if ((key == GLFW_KEY_W || key == GLFW_KEY_UP) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center += forwardSpeed;
+	}
+
+	if ((key == GLFW_KEY_S || key == GLFW_KEY_DOWN) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center -= forwardSpeed;
+	}
+
+	if ((key == GLFW_KEY_A || key == GLFW_KEY_LEFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center += sideSpeed;
+	}
+
+	if ((key == GLFW_KEY_D || key == GLFW_KEY_RIGHT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center -= sideSpeed;
+	}
+	    
+	if (key == GLFW_KEY_SPACE && (action == GLFW_REPEAT || action == GLFW_PRESS)) 
+    {
+        eye_center.y += cameraSpeed;
+    }
+	if ((key == GLFW_KEY_LEFT_SHIFT || key == GLFW_KEY_RIGHT_SHIFT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
+	{
+		eye_center.y -= cameraSpeed;
+	}
+	if (key == GLFW_KEY_LEFT_CONTROL) {
+		if (action == GLFW_PRESS) {
+			cameraSpeed = 5.f;
+		}
+		if (action == GLFW_RELEASE) {
+			cameraSpeed = 2.f;
+		}
+	}
+	if (eye_center.y < 1) eye_center.y = 1;
+
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GL_TRUE);
+}
+
+static bool mouseOutsideView = true, LMB_HELD = false;
+static void cursor_callback(GLFWwindow *window, double xpos, double ypos) {
+	int focused = glfwGetWindowAttrib(window, GLFW_FOCUSED);
+	if (xpos < 0 || xpos >= windowWidth || ypos < 0 || ypos > windowHeight || !focused) {
+		mouseOutsideView = true;
+		return;
+	}	
+
+	// Normalize to [0, 1] 
+	float x = xpos / windowWidth;
+	float y = ypos / windowHeight;
+
+	// To [-1, 1] and flip y up 
+	x = (x * 2.0f - 1.0f)*sensitivity;
+	y = (1.0f - y * 2.0f)*sensitivity;
+
+	if (mouseOutsideView) {
+		x = y = 0;
+		mouseOutsideView = false;
+	}
+
+	viewPolar += -y;
+	viewAzimuth += -x;
+	if (viewPolar < 0) viewPolar += M_PI*2;
+	if (viewPolar > M_PI*2) viewPolar -= M_PI*2;
+	if (viewPolar < 0.1) viewPolar = 0.1;
+	if (viewPolar > M_PI - 0.1) viewPolar = M_PI - 0.1;
+
+	// glm::vec3 sideAxis = glm::normalize(glm::cross(up, lookdirection));
+	lookdirection = glm::vec3(sin(viewPolar)*cos(viewAzimuth),cos(viewPolar),-sin(viewPolar)*sin(viewAzimuth));
+	
+	glfwSetCursorPos(window, halfWidth,halfHeight);
+}
+
+static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
+        if (action == GLFW_PRESS) 
+			LMB_HELD = true;
+		if (action == GLFW_RELEASE)
+			LMB_HELD = false;
 }

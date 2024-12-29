@@ -76,10 +76,6 @@ CMakeFiles/buildings.dir/final-proj/buildings.cpp.o: /home/roy/Documents/mylinux
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/type_precision.inl \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/dual_quaternion.hpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/dual_quaternion.inl \
-  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/transform.hpp \
-  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/transform.inl \
-  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.hpp \
-  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.inl \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.hpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.inl \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/integer.hpp \
@@ -714,6 +710,8 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
@@ -808,9 +806,11 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/c++/13/sstream:
 
-/usr/include/c++/13/ostream:
+/usr/include/c++/13/bits/basic_string.h:
 
-/usr/include/c++/13/memory:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/json.hpp:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
 
@@ -852,6 +852,10 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h:
 
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vector_relational.hpp:
@@ -877,20 +881,6 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/constants.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/string_cast.inl:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/tiny_gltf.h:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/transform.inl:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/transform.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtc/type_precision.hpp:
 
@@ -936,6 +926,20 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/c++/13/bits/locale_classes.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/c++/13/bits/charconv.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/usr/include/c++/13/cstdio:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+
+/usr/include/c++/13/fstream:
+
 /usr/include/c++/13/bits/allocated_ptr.h:
 
 /usr/include/c++/13/bit:
@@ -943,6 +947,8 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 /usr/include/c++/13/bits/basic_string.tcc:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl:
+
+/usr/include/c++/13/memory:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/geometric.hpp:
 
@@ -1016,19 +1022,7 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/c++/13/ext/atomicity.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/include/c++/13/numeric:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.inl:
-
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/json.hpp:
-
-/usr/include/c++/13/bits/basic_string.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
@@ -1120,6 +1114,8 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/c++/13/bits/gslice_array.h:
 
+/usr/include/c++/13/bits/hashtable_policy.h:
+
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat2x3.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl:
@@ -1205,22 +1201,6 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_int.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/setup.hpp:
-
-/usr/include/c++/13/bits/hashtable_policy.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/c++/13/bits/charconv.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/c++/13/bits/stl_pair.h:
-
-/usr/include/c++/13/cstdio:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
-
-/usr/include/c++/13/fstream:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat4x2.hpp:
 
@@ -1384,9 +1364,13 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
-/usr/include/c++/13/bits/stringfwd.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/gtx/rotate_vector.hpp:
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/usr/include/c++/13/ostream:
+
+/usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
 
@@ -1455,3 +1439,7 @@ CMakeFiles/buildings.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfi
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/13/limits:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/usr/include/c++/13/numeric:

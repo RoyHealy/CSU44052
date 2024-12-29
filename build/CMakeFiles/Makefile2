@@ -67,6 +67,7 @@ all: CMakeFiles/lab4_skeleton.dir/all
 all: CMakeFiles/lab4_character.dir/all
 all: CMakeFiles/buildings.dir/all
 all: CMakeFiles/lab2_skybox.dir/all
+all: CMakeFiles/terrain.dir/all
 all: external/all
 .PHONY : all
 
@@ -79,6 +80,7 @@ clean: CMakeFiles/lab4_skeleton.dir/clean
 clean: CMakeFiles/lab4_character.dir/clean
 clean: CMakeFiles/buildings.dir/clean
 clean: CMakeFiles/lab2_skybox.dir/clean
+clean: CMakeFiles/terrain.dir/clean
 clean: external/clean
 .PHONY : clean
 
@@ -252,6 +254,33 @@ lab2_skybox: CMakeFiles/lab2_skybox.dir/rule
 CMakeFiles/lab2_skybox.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/clean
 .PHONY : CMakeFiles/lab2_skybox.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/terrain.dir
+
+# All Build rule for target.
+CMakeFiles/terrain.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
+CMakeFiles/terrain.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=29,30,31 "Built target terrain"
+.PHONY : CMakeFiles/terrain.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/terrain.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 19
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/terrain.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
+.PHONY : CMakeFiles/terrain.dir/rule
+
+# Convenience name for target.
+terrain: CMakeFiles/terrain.dir/rule
+.PHONY : terrain
+
+# clean rule for target.
+CMakeFiles/terrain.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terrain.dir/build.make CMakeFiles/terrain.dir/clean
+.PHONY : CMakeFiles/terrain.dir/clean
 
 #=============================================================================
 # Target rules for target external/glad-3.3/CMakeFiles/glad.dir
