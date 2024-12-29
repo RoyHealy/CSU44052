@@ -95,6 +95,7 @@ CMakeFiles/camera.dir/final-proj/camera.cpp.o: /home/roy/Documents/mylinuxfiles/
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec3.hpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec4.hpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vector_relational.hpp \
+  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/stb/stb_image.h \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/json.hpp \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image.h \
   /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
@@ -1106,8 +1107,6 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 
 /usr/include/c++/13/bits/gslice_array.h:
 
-/usr/include/c++/13/bits/hashtable_policy.h:
-
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/mat2x3.hpp:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl:
@@ -1189,6 +1188,8 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl:
 
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/detail/setup.hpp:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -1351,6 +1352,8 @@ CMakeFiles/camera.dir/lab4/render/shader.cpp.o: /home/roy/Documents/mylinuxfiles
 /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1/glm/vec3.hpp:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/stb/stb_image.h:
 
 /usr/include/c++/13/bits/stl_map.h:
 

@@ -2,27 +2,22 @@
 
 // Input
 layout(location = 0) in vec2 vertexPosition;
-// layout(location = 1) in vec3 vertexNormal;
-// layout(location = 2) in vec2 vertexUV;
+// layout(location = 1) in float heightMapped;
 
 // Output data, to be interpolated for each fragment
-out vec3 worldPosition;
-//out vec3 worldNormal;
-//out vec2 uv;
+out float height;
+
 
 uniform sampler2D sampleHeightMap;
-uniform float chunk[2];
 uniform mat4 MVP;
 
-float chunkSize = 2000.f;
+float chunkSize = 201.f;
 
 void main() {
-    vec2 uv = (vertexPosition/chunkSize)-vec2(chunk[0],chunk[1]);
-    float height = texture(sampleHeightMap, uv).r;
-    // Transform vertex
-    vec4 jointPos = vec4(vertexPosition.x, height, vertexPosition.y, 1.0);
-    worldPosition = jointPos.xyz;///jointPos.w;
+    vec2 uv = (vertexPosition/chunkSize);
+    height = texture(sampleHeightMap, uv).r;
+    // height = heightMapped;
+    vec4 jointPos = vec4(vertexPosition.x, height*100, vertexPosition.y, 1.0);
+
     gl_Position =  MVP * jointPos;
-    // uv = vertexUV;
-    // worldNormal = vertexNormal;
 }

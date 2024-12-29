@@ -343,11 +343,10 @@ CMakeFiles/camera.dir/final-proj/camera.cpp.o: \
  /usr/include/c++/13/bits/mask_array.h \
  /usr/include/c++/13/bits/indirect_array.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image.h \
- /usr/include/c++/13/math.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4/render/shader.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/iomanip \
- /usr/include/c++/13/locale \
+ /usr/include/c++/13/iostream /usr/include/c++/13/math.h \
+ /usr/include/c++/13/iomanip /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
@@ -355,4 +354,6 @@ CMakeFiles/camera.dir/final-proj/camera.cpp.o: \
  /usr/include/c++/13/bits/locale_conv.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/lab2_skybox.h \
  /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/terrain.cpp \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3/stb_image_write.h \
+ /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/stb/stb_image.h \
  /usr/include/c++/13/format
