@@ -4,7 +4,10 @@ in float height;
 
 out vec3 finalColor;
 
-uniform vec3 lightSource;
+// uniform sampler2D grassTexture;
+uniform sampler2D lightSource;
+// uniform lightSource;
+uniform mat4 lightMVP;
 
 void main()
 {
@@ -24,5 +27,12 @@ void main()
 	}
 	finalColor = height*vec3(0.3f, 0.95f, 0.4f);
 
+	vec4 shadowPosition = lightMVP * vec4(worldPos, 1);
+	vec3 lightSpaceXYZ = (shadowPosition.xyz/shadowPosition.w )*0.5 + 0.5; // ndc to uv space (for sampler2D)
+	float existingDepth = texture(lightSource, lightSpaceXYZ.xy).r;
 
+	float shadow = (lightSpaceXYZ.z >= existingDepth + 1e-2) ? 0.4 : 1.0;
+	if (lightSpaceXYZ.z > 1.f) shadow = 1.f;
+	finalColor *= shadow;
+	// finalColor = vec3(existingDepth);
 }

@@ -35,6 +35,7 @@ static glm::vec3 eye_center(0.0f, 70.0f, 0.0f);
 static glm::vec3 lookdirection(1.0f, 0.0f, 0.0f);
 static glm::vec3 up(0, 1, 0);
 
+
 // View control 
 static float viewAzimuth = 0.f;
 static float viewPolar = M_PI_2;
@@ -174,6 +175,32 @@ int main(void)
 	// Camera setup
     glm::mat4 viewMatrix, projectionMatrix;
 	projectionMatrix = glm::perspective(glm::radians(FoV), (float)windowWidth / windowHeight, zNear, zFar);
+	glm::mat4 lightProj = glm::perspective(glm::radians(60.f), 1/1.f, 1000.f, 7000.f);
+	glm::vec3 lightUp = glm::normalize(glm::vec3(1.f, 4.f, -2.5f)); // glm::vec3(-850.0f, 1500.0f, 2400.0f);
+
+
+	glGenTextures(1, &shadowMap);
+	glBindTexture(GL_TEXTURE_2D, shadowMap);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, windowWidth, windowHeight, 0, GL_DEPTH_COMPONENT, GL_FLOAT, nullptr);
+	// Set texture parameters
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	GLuint shadowFBO;
+	glGenFramebuffers(1, &shadowFBO);
+	glBindFramebuffer(GL_FRAMEBUFFER, shadowFBO);
+	// glBindTexture(GL_TEXTURE_2D, 0);
+	// Attach the shadow map texture as the depth attachment
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, shadowMap, 0);
+	// Make sure we don't write to the color buffer
+	glDrawBuffer(GL_NONE);
+	glReadBuffer(GL_NONE);
+
+	// Check framebuffer status
+	if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+		std::cerr << "Framebuffer not complete!" << std::endl;
+	}
 
 	// Time and frame rate tracking
 	static double lastTime = glfwGetTime();
@@ -184,6 +211,7 @@ int main(void)
 	// Main loop
 	do
 	{
+		glBindFramebuffer(GL_FRAMEBUFFER, shadowFBO);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Update states for animation
@@ -193,8 +221,15 @@ int main(void)
 		// Rendering
 		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
 		glm::mat4 vp = projectionMatrix * viewMatrix;
+		glm::mat4 lightvp = lightProj * glm::lookAt(lightPosition+eye_center, eye_center, lightUp);
+		
 		// box.render(vp, eye_center);
-		t.render(eye_center, vp);
+		t.render(eye_center, lightvp, lightvp);
+		buildingA.render(lightvp);
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		box.render(vp, eye_center);
+		t.render(eye_center, vp, lightvp);
 		buildingA.render(vp);
 		// FPS tracking 
 		// Count number of frames over a few seconds and take average

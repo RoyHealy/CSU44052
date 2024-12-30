@@ -18,7 +18,7 @@ void main()
 	vec3 lightDir = lightPosition - worldPosition;
 	float lightDist = dot(lightDir, lightDir);
 	lightDir = normalize(lightDir);
-	vec3 v = lightIntensity * clamp(dot(lightDir, worldNormal), 0.4, 1.0); // lightDist;
+	vec3 v = lightIntensity * clamp(dot(lightDir, worldNormal), 0.1, 1.0) / lightDist;
 
 	// Tone mapping
 	v = v / (1.0 + v);

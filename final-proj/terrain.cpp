@@ -35,12 +35,12 @@ static glm::vec2 offset[] = //{{0,0}, {0,1}, {1,0}, {1,1}};
 
 // Lighting  
 static glm::vec3 lightIntensity(5e6f, 5e6f, 5e6f);
-static glm::vec3 lightPosition(-275.0f, 500.0f, 800.0f);
+static glm::vec3 lightPosition = glm::vec3(-850.0f, 1500.0f, 2400.0f);
 
 // Animation 
 static bool playAnimation = true;
 static float playbackSpeed = 2.0f;
-
+static GLuint shadowMap;
 
 static GLuint LoadTextureSkyBox(const char *texture_file_path) {
     int w, h, channels;
@@ -351,6 +351,8 @@ struct Terrain {
     GLuint indexBufferID;
     GLuint heightMapID;
 	GLuint lightSourceID;
+	GLuint lightMVPID;
+	GLuint modelMVPID;
     GLuint MVPID;
     GLuint tmpID;
 
@@ -394,7 +396,8 @@ struct Terrain {
         heightMapID = glGetUniformLocation(terrainProgramID, "sampleHeightMap");
         MVPID = glGetUniformLocation(terrainProgramID, "MVP");
 		lightSourceID = glGetUniformLocation(terrainProgramID, "lightSource");
-
+		lightMVPID = glGetUniformLocation(terrainProgramID, "lightMVP");
+		modelMVPID = glGetUniformLocation(terrainProgramID, "modelMVP");
         for (auto off : offset) {
             tmpID = getChunk(off.x-1, off.y-1);
         }
@@ -414,7 +417,7 @@ struct Terrain {
         return perlinId;
     }
 
-    void render(glm::vec3 cameraPosition, glm::mat4 viewpoint) {
+    void render(glm::vec3 cameraPosition, glm::mat4 viewpoint, glm::mat4 lightvp) {
         glm::vec3 chunkPosition = cameraPosition/chunkSize;
         int chunkX = (int)chunkPosition.x, chunkY = (int)chunkPosition.z;
         // if (chunkPosition.x-chunkX < 0.5f) {
@@ -448,12 +451,17 @@ struct Terrain {
             // Set model-view-projection matrix
             glm::mat4 mvp = viewpoint * modelMatrix;
             glUniformMatrix4fv(MVPID, 1, GL_FALSE, &mvp[0][0]);
+			glUniformMatrix4fv(lightMVPID, 1, GL_FALSE, &lightvp[0][0]);
+			glUniformMatrix4fv(modelMVPID, 1, GL_FALSE, &modelMatrix[0][0]);
 
             // skybox is using texture unit 0
             // Set textureSampler to use texture unit 1
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, tmpID);
             glUniform1i(heightMapID, 0); 
+			glActiveTexture(GL_TEXTURE1);
+			glBindTexture(GL_TEXTURE_2D, shadowMap);
+			glUniform1i(lightSourceID, 1);
             // ------------------------------------------
 
             // Draw the box

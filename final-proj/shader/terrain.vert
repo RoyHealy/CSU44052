@@ -6,9 +6,10 @@ layout(location = 0) in vec2 vertexPosition;
 
 // Output data, to be interpolated for each fragment
 out float height;
-
+out vec3 worldPos;
 
 uniform sampler2D sampleHeightMap;
+uniform mat4 modelMVP;
 uniform mat4 MVP;
 
 float chunkSize = 201.f;
@@ -18,6 +19,7 @@ void main() {
     height = texture(sampleHeightMap, uv).r;
     // height = heightMapped;
     vec4 jointPos = vec4(vertexPosition.x, height*100, vertexPosition.y, 1.0);
+    worldPos = (modelMVP * jointPos).xyz;
 
     gl_Position =  MVP * jointPos;
 }
