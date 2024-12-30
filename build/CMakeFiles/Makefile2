@@ -67,6 +67,7 @@ all: CMakeFiles/lab4_skeleton.dir/all
 all: CMakeFiles/lab4_character.dir/all
 all: CMakeFiles/camera.dir/all
 all: CMakeFiles/lab2_skybox.dir/all
+all: CMakeFiles/tempppp.dir/all
 all: external/all
 .PHONY : all
 
@@ -79,6 +80,7 @@ clean: CMakeFiles/lab4_skeleton.dir/clean
 clean: CMakeFiles/lab4_character.dir/clean
 clean: CMakeFiles/camera.dir/clean
 clean: CMakeFiles/lab2_skybox.dir/clean
+clean: CMakeFiles/tempppp.dir/clean
 clean: external/clean
 .PHONY : clean
 
@@ -252,6 +254,33 @@ lab2_skybox: CMakeFiles/lab2_skybox.dir/rule
 CMakeFiles/lab2_skybox.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/clean
 .PHONY : CMakeFiles/lab2_skybox.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tempppp.dir
+
+# All Build rule for target.
+CMakeFiles/tempppp.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
+CMakeFiles/tempppp.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=29,30,31 "Built target tempppp"
+.PHONY : CMakeFiles/tempppp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tempppp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 19
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tempppp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
+.PHONY : CMakeFiles/tempppp.dir/rule
+
+# Convenience name for target.
+tempppp: CMakeFiles/tempppp.dir/rule
+.PHONY : tempppp
+
+# clean rule for target.
+CMakeFiles/tempppp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/clean
+.PHONY : CMakeFiles/tempppp.dir/clean
 
 #=============================================================================
 # Target rules for target external/glad-3.3/CMakeFiles/glad.dir

@@ -169,6 +169,19 @@ lab2_skybox/fast:
 .PHONY : lab2_skybox/fast
 
 #=============================================================================
+# Target rules for targets named tempppp
+
+# Build rule for target.
+tempppp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tempppp
+.PHONY : tempppp
+
+# fast build rule for target.
+tempppp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/build
+.PHONY : tempppp/fast
+
+#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -218,6 +231,30 @@ final-proj/camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/final-proj/camera.cpp.s
 .PHONY : final-proj/camera.cpp.s
 
+final-proj/temp.o: final-proj/temp.cpp.o
+.PHONY : final-proj/temp.o
+
+# target to build an object file
+final-proj/temp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/final-proj/temp.cpp.o
+.PHONY : final-proj/temp.cpp.o
+
+final-proj/temp.i: final-proj/temp.cpp.i
+.PHONY : final-proj/temp.i
+
+# target to preprocess a source file
+final-proj/temp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/final-proj/temp.cpp.i
+.PHONY : final-proj/temp.cpp.i
+
+final-proj/temp.s: final-proj/temp.cpp.s
+.PHONY : final-proj/temp.s
+
+# target to generate assembly for a file
+final-proj/temp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/final-proj/temp.cpp.s
+.PHONY : final-proj/temp.cpp.s
+
 lab2/lab2_skybox.o: lab2/lab2_skybox.cpp.o
 .PHONY : lab2/lab2_skybox.o
 
@@ -248,6 +285,7 @@ lab2/render/shader.o: lab2/render/shader.cpp.o
 # target to build an object file
 lab2/render/shader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.o
 .PHONY : lab2/render/shader.cpp.o
 
 lab2/render/shader.i: lab2/render/shader.cpp.i
@@ -256,6 +294,7 @@ lab2/render/shader.i: lab2/render/shader.cpp.i
 # target to preprocess a source file
 lab2/render/shader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.i
 .PHONY : lab2/render/shader.cpp.i
 
 lab2/render/shader.s: lab2/render/shader.cpp.s
@@ -264,6 +303,7 @@ lab2/render/shader.s: lab2/render/shader.cpp.s
 # target to generate assembly for a file
 lab2/render/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.s
 .PHONY : lab2/render/shader.cpp.s
 
 lab4/lab4_character.o: lab4/lab4_character.cpp.o
@@ -358,9 +398,13 @@ help:
 	@echo "... lab2_skybox"
 	@echo "... lab4_character"
 	@echo "... lab4_skeleton"
+	@echo "... tempppp"
 	@echo "... final-proj/camera.o"
 	@echo "... final-proj/camera.i"
 	@echo "... final-proj/camera.s"
+	@echo "... final-proj/temp.o"
+	@echo "... final-proj/temp.i"
+	@echo "... final-proj/temp.s"
 	@echo "... lab2/lab2_skybox.o"
 	@echo "... lab2/lab2_skybox.i"
 	@echo "... lab2/lab2_skybox.s"

@@ -1,8 +1,10 @@
 #version 330 core
-
+in vec3 worldPos;
 in float height;
 
 out vec3 finalColor;
+
+uniform vec3 lightSource;
 
 void main()
 {
@@ -21,4 +23,6 @@ void main()
 		finalColor = vec3(0.05f, 0.8f, 0.08f);
 	}
 	finalColor = height*vec3(0.3f, 0.95f, 0.4f);
+
+
 }

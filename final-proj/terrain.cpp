@@ -33,6 +33,13 @@ static glm::vec2 offset[] = //{{0,0}, {0,1}, {1,0}, {1,1}};
                              {0,-1}, {0,0}, {0,1},
                              {1,-1}, {1,0}, {1,1}};
 
+// Lighting  
+static glm::vec3 lightIntensity(5e6f, 5e6f, 5e6f);
+static glm::vec3 lightPosition(-275.0f, 500.0f, 800.0f);
+
+// Animation 
+static bool playAnimation = true;
+static float playbackSpeed = 2.0f;
 
 
 static GLuint LoadTextureSkyBox(const char *texture_file_path) {
@@ -343,6 +350,7 @@ struct Terrain {
     GLuint vertexBufferID;
     GLuint indexBufferID;
     GLuint heightMapID;
+	GLuint lightSourceID;
     GLuint MVPID;
     GLuint tmpID;
 
@@ -385,6 +393,7 @@ struct Terrain {
 		}
         heightMapID = glGetUniformLocation(terrainProgramID, "sampleHeightMap");
         MVPID = glGetUniformLocation(terrainProgramID, "MVP");
+		lightSourceID = glGetUniformLocation(terrainProgramID, "lightSource");
 
         for (auto off : offset) {
             tmpID = getChunk(off.x-1, off.y-1);
@@ -603,13 +612,7 @@ static float perlin(float x,float y) {
 
 
 
-// Lighting  
-static glm::vec3 lightIntensity(5e6f, 5e6f, 5e6f);
-static glm::vec3 lightPosition(-275.0f, 500.0f, 800.0f);
 
-// Animation 
-static bool playAnimation = true;
-static float playbackSpeed = 2.0f;
 
 struct MyAsset {
 // Shader variable IDs
@@ -620,9 +623,11 @@ struct MyAsset {
 	GLuint baseColorFactorID;
 	GLuint textureID;
 	GLuint programID;
-	GLuint instanceID;
-
+	GLuint instanceVBO;
+	// glm::vec3 instanceTranslations[];
 	tinygltf::Model model;
+
+	glm::mat4 modelMatrix;
 
 	// Each VAO corresponds to each mesh primitive in the GLTF model
 	struct PrimitiveObject {
@@ -978,11 +983,19 @@ struct MyAsset {
 		return res;
 	}
 
-	void initialize(const char* filename) {
+	void initialize(const char* filename, glm::vec3 scale, glm::vec3 translate, glm::vec3 offsets[]) {
 		// Modify your path if needed
 		if (!loadModel(model, filename)) {
 			return;
 		}
+		// for (int i =0;i<25;i++) 
+		glGenBuffers(1, &instanceVBO);
+		glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3)*25, &offsets[0], GL_STATIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		glm::mat4 mat = glm::mat4();
+		mat = glm::translate(mat, translate);
+		modelMatrix = glm::scale(mat, scale);
 		// for (auto& buf : model.buffers) {
 			
 		// 	std::cout << buf.data.size() << std::endl;
@@ -1010,7 +1023,7 @@ struct MyAsset {
 		baseColorFactorID = glGetUniformLocation(programID, "baseColorFactor");
 		lightPositionID = glGetUniformLocation(programID, "lightPosition");
 		lightIntensityID = glGetUniformLocation(programID, "lightIntensity");
-		instanceID = glGetUniformLocation(programID, "offsets");
+		// instanceID = glGetUniformLocation(programID, "offsets");
 	}
 
 	void bindMesh(std::vector<PrimitiveObject> &primitiveObjects,
@@ -1077,6 +1090,11 @@ struct MyAsset {
 					std::cout << "vaa missing: " << attrib.first << std::endl;
 				}
 			}
+			glEnableVertexAttribArray(5);
+			glBindBuffer(GL_ARRAY_BUFFER, instanceVBO); // this attribute comes from a different vertex buffer
+			glVertexAttribPointer(5, 2, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			glVertexAttribDivisor(5, 1); // tell OpenGL this is an instanced vertex attribute.
 
 			// Record VAO for later use
 			PrimitiveObject primitiveObject;
@@ -1135,6 +1153,7 @@ struct MyAsset {
 			glUniform4fv(baseColorFactorID, 1, &k[0]);
 
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbos.at(indexAccessor.bufferView));
+			
 			glDrawElementsInstanced(primitive.mode, indexAccessor.count,
 						indexAccessor.componentType,
 						BUFFER_OFFSET(indexAccessor.byteOffset), 25);
@@ -1161,17 +1180,17 @@ struct MyAsset {
 		}
 	}
 
-	void render(glm::mat4 cameraMatrix, glm::vec3 translations[25]) {
+	void render(glm::mat4 cameraMatrix) {
 		glUseProgram(programID);
 		// Set camera
-		glm::mat4 mvp = cameraMatrix;
+		glm::mat4 mvp = cameraMatrix * modelMatrix;
 		glUniformMatrix4fv(mvpMatrixID, 1, GL_FALSE, &mvp[0][0]);
 		// -----------------------------------------------------------------
 		// TODO: Set animation data for linear blend skinning in shader
 		// -----------------------------------------------------------------
 		// glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
 		
-		glUniformMatrix3fv(instanceID, 25, GL_FALSE, &translations[0][0]); // instancing
+		// glUniformMatrix3fv(instanceID, 25, GL_FALSE, &translations[0][0]); // instancing
 		// -----------------------------------------------------------------
 		// Set light data 
 		glUniform3fv(lightPositionID, 1, &lightPosition[0]);

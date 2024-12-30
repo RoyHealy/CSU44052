@@ -58,3 +58,13 @@ target_link_libraries(lab2_skybox
 	glfw
 	glad
 )
+
+add_executable(tempppp
+	final-proj/temp.cpp
+	lab2/render/shader.cpp
+)
+target_link_libraries(tempppp
+	${OPENGL_LIBRARY}
+	glfw
+	glad
+)

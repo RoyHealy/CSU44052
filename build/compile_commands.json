@@ -48,6 +48,18 @@
   "output": "CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o"
 },
 {
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/tempppp.dir/final-proj/temp.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/temp.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/final-proj/temp.cpp",
+  "output": "CMakeFiles/tempppp.dir/final-proj/temp.cpp.o"
+},
+{
+  "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build",
+  "command": "/usr/bin/g++  -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glfw-3.1.2/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glm-0.9.7.1 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-opengl-3.3/include -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/tinygltf-2.9.3 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab4 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2 -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -std=gnu++11 -o CMakeFiles/tempppp.dir/lab2/render/shader.cpp.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/render/shader.cpp",
+  "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/lab2/render/shader.cpp",
+  "output": "CMakeFiles/tempppp.dir/lab2/render/shader.cpp.o"
+},
+{
   "directory": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/external/glad-3.3",
   "command": "/usr/bin/gcc -Dglad_EXPORTS -I/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/include -g -fPIC -o CMakeFiles/glad.dir/src/gl.c.o -c /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c",
   "file": "/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/external/glad-3.3/src/gl.c",

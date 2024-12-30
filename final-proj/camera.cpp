@@ -134,14 +134,6 @@ int main(void)
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
-
-	std::string filename = "skyscraperB";
-	std::string filepath = "../final-proj/models/" + filename + ".gltf";
-
-	// Our 3D asset
-    MyAsset buildingA;
-    buildingA.initialize(filepath.c_str());
-
 	glm::vec3 translations[25];
 	int index = 0;
 	float offset = 2.f;
@@ -150,12 +142,24 @@ int main(void)
 		for(int x = -5; x < 5; x += 2)
 		{
 			glm::vec3 translation;
-			translation.x = (float)x* offset;
+			translation.x = (float)x;//* offset;
 			translation.y = 0.f;
-			translation.z = (float)z* offset;
+			translation.z = (float)z;//* offset;
 			translations[index++] = translation;
 		}
 	}  
+	
+	glm::vec3 buildingScale = glm::vec3(130.f,130.f,130.f);
+	std::string filename = "skyscraperB";
+	std::string filepath = "../final-proj/models/" + filename + ".gltf";
+	// Our 3D asset
+    MyAsset buildingA;
+    buildingA.initialize(filepath.c_str(), buildingScale, glm::vec3(200.f, 50.f, 500.f), translations);
+
+	MyAsset wolf;
+	// wolf.initialize("Wolf-Blender-2.82a.gltf");
+
+	
 
 	Skybox box;
 	box.initialize(glm::vec3(0, 0, 0), glm::vec3(3000, 3000, 3000));
@@ -189,9 +193,9 @@ int main(void)
 		// Rendering
 		viewMatrix = glm::lookAt(eye_center, eye_center+lookdirection, up);
 		glm::mat4 vp = projectionMatrix * viewMatrix;
-		box.render(vp, eye_center);
+		// box.render(vp, eye_center);
 		t.render(eye_center, vp);
-		buildingA.render(vp, translations);
+		buildingA.render(vp);
 		// FPS tracking 
 		// Count number of frames over a few seconds and take average
 		frames++;
