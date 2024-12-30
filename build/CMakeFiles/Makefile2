@@ -63,10 +63,7 @@ CMAKE_BINARY_DIR = /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Gra
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lab4_skeleton.dir/all
-all: CMakeFiles/lab4_character.dir/all
 all: CMakeFiles/camera.dir/all
-all: CMakeFiles/lab2_skybox.dir/all
 all: CMakeFiles/tempppp.dir/all
 all: external/all
 .PHONY : all
@@ -76,10 +73,7 @@ preinstall: external/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lab4_skeleton.dir/clean
-clean: CMakeFiles/lab4_character.dir/clean
 clean: CMakeFiles/camera.dir/clean
-clean: CMakeFiles/lab2_skybox.dir/clean
 clean: CMakeFiles/tempppp.dir/clean
 clean: external/clean
 .PHONY : clean
@@ -148,60 +142,6 @@ external/glfw-3.1.2/src/clean: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/clean
 .PHONY : external/glfw-3.1.2/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab4_skeleton.dir
-
-# All Build rule for target.
-CMakeFiles/lab4_skeleton.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
-CMakeFiles/lab4_skeleton.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=26,27,28 "Built target lab4_skeleton"
-.PHONY : CMakeFiles/lab4_skeleton.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lab4_skeleton.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 19
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab4_skeleton.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab4_skeleton.dir/rule
-
-# Convenience name for target.
-lab4_skeleton: CMakeFiles/lab4_skeleton.dir/rule
-.PHONY : lab4_skeleton
-
-# clean rule for target.
-CMakeFiles/lab4_skeleton.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/clean
-.PHONY : CMakeFiles/lab4_skeleton.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/lab4_character.dir
-
-# All Build rule for target.
-CMakeFiles/lab4_character.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
-CMakeFiles/lab4_character.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=23,24,25 "Built target lab4_character"
-.PHONY : CMakeFiles/lab4_character.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lab4_character.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 19
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab4_character.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab4_character.dir/rule
-
-# Convenience name for target.
-lab4_character: CMakeFiles/lab4_character.dir/rule
-.PHONY : lab4_character
-
-# clean rule for target.
-CMakeFiles/lab4_character.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/clean
-.PHONY : CMakeFiles/lab4_character.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/camera.dir
 
 # All Build rule for target.
@@ -229,33 +169,6 @@ CMakeFiles/camera.dir/clean:
 .PHONY : CMakeFiles/camera.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab2_skybox.dir
-
-# All Build rule for target.
-CMakeFiles/lab2_skybox.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
-CMakeFiles/lab2_skybox.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=20,21,22 "Built target lab2_skybox"
-.PHONY : CMakeFiles/lab2_skybox.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/lab2_skybox.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 19
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab2_skybox.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab2_skybox.dir/rule
-
-# Convenience name for target.
-lab2_skybox: CMakeFiles/lab2_skybox.dir/rule
-.PHONY : lab2_skybox
-
-# clean rule for target.
-CMakeFiles/lab2_skybox.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/clean
-.PHONY : CMakeFiles/lab2_skybox.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/tempppp.dir
 
 # All Build rule for target.
@@ -263,7 +176,7 @@ CMakeFiles/tempppp.dir/all: external/glad-3.3/CMakeFiles/glad.dir/all
 CMakeFiles/tempppp.dir/all: external/glfw-3.1.2/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=29,30,31 "Built target tempppp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/roy/Documents/mylinuxfiles/Documents/college/Fourth/Graphics/project/build/CMakeFiles --progress-num=20,21,22 "Built target tempppp"
 .PHONY : CMakeFiles/tempppp.dir/all
 
 # Build rule for subdir invocation for target.

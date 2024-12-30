@@ -1026,7 +1026,7 @@ struct MyAsset {
 		}
 		// Get a handle for GLSL variables
 		mvpMatrixID = glGetUniformLocation(programID, "MVP");
-		// jointMatricesID = glGetUniformLocation(programID, "u_jointMat");
+		jointMatricesID = glGetUniformLocation(programID, "u_jointMat");
 		// textureID = glGetUniformLocation(programID, "textureSampler");
 		baseColorFactorID = glGetUniformLocation(programID, "baseColorFactor");
 		lightPositionID = glGetUniformLocation(programID, "lightPosition");
@@ -1196,8 +1196,9 @@ struct MyAsset {
 		// -----------------------------------------------------------------
 		// TODO: Set animation data for linear blend skinning in shader
 		// -----------------------------------------------------------------
-		// glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
-		
+		if (skinObjects.size() > 0 && skinObjects[0].jointMatrices.size() > 0) {
+			glUniformMatrix4fv(jointMatricesID, 25, GL_FALSE, &skinObjects[0].jointMatrices[0][0][0]);
+		}
 		// glUniformMatrix3fv(instanceID, 25, GL_FALSE, &translations[0][0]); // instancing
 		// -----------------------------------------------------------------
 		// Set light data 

@@ -19,41 +19,11 @@ include_directories(
 	lab2/
 )
 
-add_executable(lab4_skeleton
-	lab4/lab4_skeleton.cpp
-	lab4/render/shader.cpp
-)
-target_link_libraries(lab4_skeleton
-	${OPENGL_LIBRARY}
-	glfw
-	glad
-)
-
-add_executable(lab4_character
-	lab4/lab4_character.cpp
-	lab4/render/shader.cpp
-)
-target_link_libraries(lab4_character
-	${OPENGL_LIBRARY}
-	glfw
-	glad
-)
-
 add_executable(camera
 	final-proj/camera.cpp
 	lab4/render/shader.cpp
 )
 target_link_libraries(camera
-	${OPENGL_LIBRARY}
-	glfw
-	glad
-)
-
-add_executable(lab2_skybox
-	lab2/lab2_skybox.cpp
-	lab2/render/shader.cpp
-)
-target_link_libraries(lab2_skybox
 	${OPENGL_LIBRARY}
 	glfw
 	glad

@@ -117,32 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab4_skeleton
-
-# Build rule for target.
-lab4_skeleton: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab4_skeleton
-.PHONY : lab4_skeleton
-
-# fast build rule for target.
-lab4_skeleton/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/build
-.PHONY : lab4_skeleton/fast
-
-#=============================================================================
-# Target rules for targets named lab4_character
-
-# Build rule for target.
-lab4_character: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab4_character
-.PHONY : lab4_character
-
-# fast build rule for target.
-lab4_character/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/build
-.PHONY : lab4_character/fast
-
-#=============================================================================
 # Target rules for targets named camera
 
 # Build rule for target.
@@ -154,19 +128,6 @@ camera: cmake_check_build_system
 camera/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/build
 .PHONY : camera/fast
-
-#=============================================================================
-# Target rules for targets named lab2_skybox
-
-# Build rule for target.
-lab2_skybox: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab2_skybox
-.PHONY : lab2_skybox
-
-# fast build rule for target.
-lab2_skybox/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/build
-.PHONY : lab2_skybox/fast
 
 #=============================================================================
 # Target rules for targets named tempppp
@@ -255,36 +216,11 @@ final-proj/temp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/final-proj/temp.cpp.s
 .PHONY : final-proj/temp.cpp.s
 
-lab2/lab2_skybox.o: lab2/lab2_skybox.cpp.o
-.PHONY : lab2/lab2_skybox.o
-
-# target to build an object file
-lab2/lab2_skybox.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.o
-.PHONY : lab2/lab2_skybox.cpp.o
-
-lab2/lab2_skybox.i: lab2/lab2_skybox.cpp.i
-.PHONY : lab2/lab2_skybox.i
-
-# target to preprocess a source file
-lab2/lab2_skybox.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.i
-.PHONY : lab2/lab2_skybox.cpp.i
-
-lab2/lab2_skybox.s: lab2/lab2_skybox.cpp.s
-.PHONY : lab2/lab2_skybox.s
-
-# target to generate assembly for a file
-lab2/lab2_skybox.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/lab2_skybox.cpp.s
-.PHONY : lab2/lab2_skybox.cpp.s
-
 lab2/render/shader.o: lab2/render/shader.cpp.o
 .PHONY : lab2/render/shader.o
 
 # target to build an object file
 lab2/render/shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.o
 .PHONY : lab2/render/shader.cpp.o
 
@@ -293,7 +229,6 @@ lab2/render/shader.i: lab2/render/shader.cpp.i
 
 # target to preprocess a source file
 lab2/render/shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.i
 .PHONY : lab2/render/shader.cpp.i
 
@@ -302,65 +237,14 @@ lab2/render/shader.s: lab2/render/shader.cpp.s
 
 # target to generate assembly for a file
 lab2/render/shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2_skybox.dir/build.make CMakeFiles/lab2_skybox.dir/lab2/render/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tempppp.dir/build.make CMakeFiles/tempppp.dir/lab2/render/shader.cpp.s
 .PHONY : lab2/render/shader.cpp.s
-
-lab4/lab4_character.o: lab4/lab4_character.cpp.o
-.PHONY : lab4/lab4_character.o
-
-# target to build an object file
-lab4/lab4_character.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.o
-.PHONY : lab4/lab4_character.cpp.o
-
-lab4/lab4_character.i: lab4/lab4_character.cpp.i
-.PHONY : lab4/lab4_character.i
-
-# target to preprocess a source file
-lab4/lab4_character.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.i
-.PHONY : lab4/lab4_character.cpp.i
-
-lab4/lab4_character.s: lab4/lab4_character.cpp.s
-.PHONY : lab4/lab4_character.s
-
-# target to generate assembly for a file
-lab4/lab4_character.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/lab4_character.cpp.s
-.PHONY : lab4/lab4_character.cpp.s
-
-lab4/lab4_skeleton.o: lab4/lab4_skeleton.cpp.o
-.PHONY : lab4/lab4_skeleton.o
-
-# target to build an object file
-lab4/lab4_skeleton.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.o
-.PHONY : lab4/lab4_skeleton.cpp.o
-
-lab4/lab4_skeleton.i: lab4/lab4_skeleton.cpp.i
-.PHONY : lab4/lab4_skeleton.i
-
-# target to preprocess a source file
-lab4/lab4_skeleton.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.i
-.PHONY : lab4/lab4_skeleton.cpp.i
-
-lab4/lab4_skeleton.s: lab4/lab4_skeleton.cpp.s
-.PHONY : lab4/lab4_skeleton.s
-
-# target to generate assembly for a file
-lab4/lab4_skeleton.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/lab4_skeleton.cpp.s
-.PHONY : lab4/lab4_skeleton.cpp.s
 
 lab4/render/shader.o: lab4/render/shader.cpp.o
 .PHONY : lab4/render/shader.o
 
 # target to build an object file
 lab4/render/shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.o
 .PHONY : lab4/render/shader.cpp.o
 
@@ -369,8 +253,6 @@ lab4/render/shader.i: lab4/render/shader.cpp.i
 
 # target to preprocess a source file
 lab4/render/shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.i
 .PHONY : lab4/render/shader.cpp.i
 
@@ -379,8 +261,6 @@ lab4/render/shader.s: lab4/render/shader.cpp.s
 
 # target to generate assembly for a file
 lab4/render/shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_skeleton.dir/build.make CMakeFiles/lab4_skeleton.dir/lab4/render/shader.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4_character.dir/build.make CMakeFiles/lab4_character.dir/lab4/render/shader.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera.dir/build.make CMakeFiles/camera.dir/lab4/render/shader.cpp.s
 .PHONY : lab4/render/shader.cpp.s
 
@@ -395,9 +275,6 @@ help:
 	@echo "... camera"
 	@echo "... glad"
 	@echo "... glfw"
-	@echo "... lab2_skybox"
-	@echo "... lab4_character"
-	@echo "... lab4_skeleton"
 	@echo "... tempppp"
 	@echo "... final-proj/camera.o"
 	@echo "... final-proj/camera.i"
@@ -405,18 +282,9 @@ help:
 	@echo "... final-proj/temp.o"
 	@echo "... final-proj/temp.i"
 	@echo "... final-proj/temp.s"
-	@echo "... lab2/lab2_skybox.o"
-	@echo "... lab2/lab2_skybox.i"
-	@echo "... lab2/lab2_skybox.s"
 	@echo "... lab2/render/shader.o"
 	@echo "... lab2/render/shader.i"
 	@echo "... lab2/render/shader.s"
-	@echo "... lab4/lab4_character.o"
-	@echo "... lab4/lab4_character.i"
-	@echo "... lab4/lab4_character.s"
-	@echo "... lab4/lab4_skeleton.o"
-	@echo "... lab4/lab4_skeleton.i"
-	@echo "... lab4/lab4_skeleton.s"
 	@echo "... lab4/render/shader.o"
 	@echo "... lab4/render/shader.i"
 	@echo "... lab4/render/shader.s"

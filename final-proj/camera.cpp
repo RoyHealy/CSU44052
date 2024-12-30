@@ -157,10 +157,9 @@ int main(void)
     MyAsset buildingA;
     buildingA.initialize(filepath.c_str(), buildingScale, glm::vec3(200.f, 50.f, 500.f), translations);
 
-	MyAsset wolf;
-	// wolf.initialize("Wolf-Blender-2.82a.gltf");
-
-	
+	// filepath = "../final-proj/models/Wolf-Blender-2.82a.gltf";
+	// MyAsset wolf;
+	// wolf.initialize(filepath.c_str(), glm::vec3(10.f,10.f,10.f), glm::vec3(200.f, 50.f, 100.f), {});
 
 	Skybox box;
 	box.initialize(glm::vec3(0, 0, 0), glm::vec3(3000, 3000, 3000));
@@ -231,6 +230,7 @@ int main(void)
 		box.render(vp, eye_center);
 		t.render(eye_center, vp, lightvp);
 		buildingA.render(vp);
+		// wolf.render(vp);
 		// FPS tracking 
 		// Count number of frames over a few seconds and take average
 		frames++;
@@ -302,7 +302,7 @@ static void key_callback(GLFWwindow *window, int key, int scancode, int action, 
 	}
 	if (key == GLFW_KEY_LEFT_CONTROL) {
 		if (action == GLFW_PRESS) {
-			cameraSpeed = 5.f;
+			cameraSpeed = 40.f;
 		}
 		if (action == GLFW_RELEASE) {
 			cameraSpeed = 2.f;
